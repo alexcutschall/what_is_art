@@ -6,12 +6,13 @@ $playfair-display: 'Playfair Display', serif;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 50px;
 }
 
 .header-style {
   font-family: $playfair-display;
   font-size: 100px;
-  margin-top: 100px;
+  margin-top: 50px;
   text-align: center;
 }
 
@@ -20,21 +21,12 @@ $playfair-display: 'Playfair Display', serif;
 }
 
 .login-button {
-   border-top: 1px solid #96d1f8;
-   background: #65a9d7;
-   background: -webkit-gradient(linear, left top, left bottom, from(#bcd93b), to(#65a9d7));
    background: -webkit-linear-gradient(top, #bcd93b, #65a9d7);
-   background: -moz-linear-gradient(top, #bcd93b, #65a9d7);
-   background: -ms-linear-gradient(top, #bcd93b, #65a9d7);
-   background: -o-linear-gradient(top, #bcd93b, #65a9d7);
-   border-radius: 40px;
-   box-shadow: rgba(0,0,0,1) 0 1px 0;
    color: white;
-   font-size: 17px;
-   font-family: Georgia, serif;
-   -moz-border-radius: 40px;
-   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   padding: 8.5px 17px;
+   font-size: 50px;
+   font-family: $playfair-display;
+   margin-top: 100px;
+   padding: 20px 300px;
    text-decoration: none;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    vertical-align: middle;
@@ -54,7 +46,53 @@ $playfair-display: 'Playfair Display', serif;
    }
 
 .logo {
-  margin-left: 10px;
-  margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
   width: 100px;
+}
+
+//LOGIN PAGE
+.login-background {
+  background-image: image-url('blue-texture.jpg'); 
+  background-size: cover;
+}
+
+.field {
+  border: 1px solid black;
+  border-radius: 100px;
+  font-family: $playfair-display;
+  font-size: 50px;
+  margin: 35px;
+  padding: 25px;
+  text-align: center;
+
+}
+
+.login-form {
+  text-align: center;
+  opacity: 1;
+}
+
+.login-logo {
+  display: block;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.side-button {
+  border: 1px solid black;
+  border-radius: 100px;
+  font-family: $playfair-display;
+  font-size: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 250px;
+  padding-right: 100px;
+
+  position: absolute;
+  bottom: 250px;
+  left: -150px;
 }
