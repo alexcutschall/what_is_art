@@ -52,6 +52,11 @@ $playfair-display: 'Playfair Display', serif;
 }
 
 //LOGIN PAGE
+.login-background {
+  background-image: image-url('blue-texture.jpg'); 
+  background-size: cover;
+}
+
 .field {
   border: 1px solid black;
   border-radius: 100px;
@@ -65,6 +70,7 @@ $playfair-display: 'Playfair Display', serif;
 
 .login-form {
   text-align: center;
+  opacity: 1;
 }
 
 .login-logo {

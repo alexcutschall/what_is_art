@@ -1,15 +1,17 @@
-<%= image_tag image_url('websitelogo.png'), class: 'login-logo' %>
-  <%= form_tag login_path do %>
-  <div class="login-form">
-      <%= hidden_field_tag :username %><br>
-      <%= text_field_tag :username, "Username", class: "field" %><br>
+<html class='login-background'>
+  <%= image_tag image_url('websitelogo.png'), class: 'login-logo' %>
+    <%= form_tag login_path do %>
+    <div class="login-form">
+        <%= hidden_field_tag :username %><br>
+        <%= text_field_tag :username, "Username", class: "field" %><br>
 
-      <%= hidden_field_tag :password %>
-      <%= text_field_tag :password, "Password", class: "field" %><br>
+        <%= hidden_field_tag :password %>
+        <%= text_field_tag :password, "Password", class: "field" %><br>
 
-    <%= submit_tag "Login" %><br>
-    Forgot Your Password?
-    </div>
-  <% end %>
+      <%= submit_tag "Login" %><br>
+      Forgot Your Password?
+      </div>
+    <% end %>
 
-<%= button_to "Sign Up!", new_user_path, class: 'side-button' %><br>
+  <%= button_to "Sign Up!", new_user_path, class: 'side-button' %><br>
+</html>
