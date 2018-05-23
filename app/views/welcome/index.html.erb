@@ -1,4 +1,5 @@
+<%= image_tag image_url('websitelogo.png'), class: 'logo' %>
 <h1 class="header-style">What is Art?</h1>
-<%= image_tag image_url('websitelogo.png') %>
-<%= image_tag image_url('dancing.png') %>
-Log in
+<%= image_tag image_url('dancing.png'), class: 'dancing-photo' %>
+<div class="login-box"><%= link_to "Login", login_path, class: 'login-button' %></div>
+<!-- <%= button_to "Sign Up", new_user_path, class: 'button' %> -->

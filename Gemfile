@@ -5,7 +5,7 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.0'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 3.11'
-# Use SCSS for stylesheets
+gem 'bootstrap-sass', '~> 3.3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -13,11 +13,13 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bcrypt'
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'database_cleaner'
+  gem 'factory_bot'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
