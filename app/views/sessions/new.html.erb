@@ -1,3 +1,5 @@
+<%= image_tag image_url('websitelogo.png'), class: 'login-logo' %>
+<div class="text-center">
 <%= form_tag login_path do %>
   <%= label_tag :username %></legend>
   <%= text_field_tag :username %><br>
@@ -8,3 +10,4 @@
   <%= submit_tag "Login" %>
 <% end %>
 <%= link_to "Create Account", new_user_path %>
+</div>
