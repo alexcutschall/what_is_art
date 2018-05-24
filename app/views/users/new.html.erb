@@ -1,12 +1,20 @@
-<%= form_for @user do |f| %>
-  <%= label_tag :username %>
-  <%= f.text_field :username %>
+<html class='login-background'>
+  <%= image_tag image_url('websitelogo.png'), class: 'login-logo' %>
+  <%= form_for @user, html: {multipart: true} do |f| %>
+    <div class="login-form">
+      <%= hidden_field_tag :username %>
+      <%= f.text_field :username, placeholder: "Username", class: 'field' %>
 
-  <%= label_tag :password %>
-  <%= f.text_field :password %>
+      <%= hidden_field_tag :password %>
+      <%= f.text_field :password, placeholder: "Password", class: 'field' %>
 
-  <%= label_tag :password_confirmation %>
-  <%= f.text_field :password_confirmation %>
+      <%= f.file_field :profile_pic %>
 
-  <%= f.submit "Sign Up!" %>
-<% end %>
+      <%= hidden_field_tag :password_confirmation %>
+      <%= f.text_field :password_confirmation, placeholder: "Password Confirmation", class: 'field' %><br>
+
+    <%= f.submit "Sign Up!", class: 'field' %>
+  </div>
+  <% end %>
+    <%= link_to "Login!", login_path, class: 'side-button' %><br>
+</html>

@@ -14,8 +14,8 @@ describe 'as a user' do
       fill_in 'password', with: user.password
       click_on 'Login'
 
-      expect(current_path).to eq("/")
-      # expect(page).to have_content("Welcome back, #{user.username}!")
+      expect(current_path).to eq("/users/#{user.id}")
+      expect(page).to have_content("Welcome back, #{user.username}!")
     end
   end
 end
