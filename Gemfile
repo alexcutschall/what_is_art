@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'figaro'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt'
+gem 'paperclip'
 
 group :development, :test do
   gem 'rspec-rails'
