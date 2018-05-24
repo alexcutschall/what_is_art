@@ -1,12 +1,17 @@
-<%= form_for @user do |f| %>
-  <%= label_tag :username %>
-  <%= f.text_field :username %>
+<html class='login-background'>
+  <%= image_tag image_url('websitelogo.png'), class: 'login-logo' %>
+  <%= form_for @user do |f| %>
+    <div class="login-form">
+      <%= label_tag :username %>
+      <%= f.text_field :username %>
 
-  <%= label_tag :password %>
-  <%= f.text_field :password %>
+      <%= label_tag :password %>
+      <%= f.text_field :password %>
 
-  <%= label_tag :password_confirmation %>
-  <%= f.text_field :password_confirmation %>
+      <%= label_tag :password_confirmation %>
+      <%= f.text_field :password_confirmation %>
 
-  <%= f.submit "Sign Up!" %>
-<% end %>
+    <%= f.submit "Sign Up!" %>
+  </div>
+  <% end %>
+</html>
