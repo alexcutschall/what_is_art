@@ -12,6 +12,7 @@ describe 'as an unregistered user' do
       click_on 'Sign Up!'
 
       expect(current_path).to eq('/')
+      expect(User.last.username).to eq('Batman')
     end
     it "doesn't allow them to sign up without a password" do
       visit '/login'
