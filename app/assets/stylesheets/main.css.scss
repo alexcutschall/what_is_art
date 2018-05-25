@@ -128,9 +128,13 @@ $simple-box-default: #86B991;
 }
 
 .landscape-picture {
-  border: 5px solid black;
+  align-items: stretch;
+  border-top: 1px solid black;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+  display: flex;
   height: 250px;
-
+  justify-content: center;
 }
 
 .name-box {
@@ -157,6 +161,10 @@ $simple-box-default: #86B991;
 
 .profile-gallery {
   height: 100px;
+}
+
+.profile-landscape {
+
 }
 
 .quiz-box {
