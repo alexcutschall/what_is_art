@@ -1,5 +1,6 @@
 $fauno: 'Fauna One', serif;
 $playfair-display: 'Playfair Display', serif;
+$simple-box-default: #86B991;
 
 // ROOT PAGE
 .dancing-photo {
@@ -98,10 +99,41 @@ $playfair-display: 'Playfair Display', serif;
 }
 
 //USER PROFILE PAGE
-.landscape-picture {
+.favorites-box {
+  border: 5px solid black;
 
 }
 
+.gallery-box {
+  border: 5px solid black;
+
+}
+
+.landscape-picture {
+  border: 5px solid black;
+  height: 250px;
+
+}
+
+.quote-box {
+  border: 5px solid black;
+
+}
+
+.simple-box {
+  background-color: $simple-box-default;
+  border: 5px solid black;
+  height: 200px;
+}
+
 .user-profile-pic {
-  
+  border: 5px solid white;
+  border-radius: 100px;
+  height: 280px;
+  position: absolute;
+  top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0
 }
