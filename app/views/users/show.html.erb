@@ -2,16 +2,36 @@
   top profile box goes here
 </div>
 <%= image_tag @user.profile_pic.url, class: 'user-profile-pic' %>
-<!-- <%= @user.username %> -->
 <div class="simple-box">
-  colored box below image
 </div>
-<div class="favorites-box">
-  Favorites
-</div>
-<div class="gallery-box">
-  Gallery
-</div>
-<div class="quote-box">
-  Quote of the Day
+
+<div class="profile-container">
+  <div class="profile-column">
+    <div class="name-box">
+      <%= @user.username %>
+    </div>
+
+    <div class="quote-box">
+      Quote of the Day
+    </div>
+
+    <div class="quiz-box">
+      Quiz of the Day
+    </div>
+  </div>
+  <div class="profile-column">
+    <div class="favorites-box">
+      Favorites
+    </div>
+
+    <div class="gallery-box">
+      Gallery
+    </div>
+
+    <div class="calendar-box">
+      <%= image_tag image_url('calendar.png'), class: 'calendar' %>
+    </div>
+    
+  </div>
+
 </div>

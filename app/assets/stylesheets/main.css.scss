@@ -99,14 +99,22 @@ $simple-box-default: #86B991;
 }
 
 //USER PROFILE PAGE
+.calendar {
+  height: 100px;
+}
+
+.calendar-box {
+  border: 5px solid black;
+}
+
 .favorites-box {
   border: 5px solid black;
-
+  height: 300px;
 }
 
 .gallery-box {
   border: 5px solid black;
-
+  height: 250px;
 }
 
 .landscape-picture {
@@ -115,14 +123,37 @@ $simple-box-default: #86B991;
 
 }
 
+.name-box {
+  border: 5px solid black;
+  height: 100px;
+}
+
+.profile-column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.quiz-box {
+  border: 5px solid black;
+  height: 200px;
+}
+
 .quote-box {
   border: 5px solid black;
-
+  height: 300px;
 }
 
 .simple-box {
   background-color: $simple-box-default;
-  border: 5px solid black;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
   height: 200px;
 }
 
