@@ -1,1 +1,38 @@
-Welcome back, <%= @user.username %>!
+<div class="landscape-picture">
+  top profile box goes here
+</div>
+<%= image_tag @user.profile_pic.url, class: 'user-profile-pic' %>
+<div class="simple-box">
+</div>
+
+<div class="profile-container">
+  <div class="profile-column">
+    <div class="name-box">
+      <%= @user.username %>
+    </div>
+
+    <div class="quote-box">
+      Quote of the Day
+    </div>
+
+    <div class="quiz-box">
+      Quiz of the Day
+    </div>
+  </div>
+
+  <div class="profile-column">
+    <div class="favorites-box">
+      <%= image_tag image_url('favorite.png'), class: 'profile-favorite' %>
+    </div>
+
+    <div class="gallery-box">
+      <%= image_tag image_url('gallery.png'), class: 'profile-gallery' %>
+    </div>
+
+    <div class="calendar-box">
+      <%= image_tag image_url('calendar.png'), class: 'calendar' %>
+    </div>
+
+  </div>
+
+</div>

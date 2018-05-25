@@ -1,5 +1,12 @@
 $fauno: 'Fauna One', serif;
 $playfair-display: 'Playfair Display', serif;
+$simple-box-default: #86B991;
+
+@mixin profile-box-settings {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
 
 // ROOT PAGE
 .dancing-photo {
@@ -95,4 +102,89 @@ $playfair-display: 'Playfair Display', serif;
   position: absolute;
   bottom: 250px;
   left: -150px;
+}
+
+//USER PROFILE PAGE
+.calendar {
+  height: 100px;
+}
+
+.calendar-box {
+  border: 5px solid black;
+  @include profile-box-settings;
+}
+
+.favorites-box {
+  border: 5px solid black;
+  height: 300px;
+  @include profile-box-settings;
+}
+
+.gallery-box {
+  border: 5px solid black;
+  height: 250px;
+  @include profile-box-settings;
+}
+
+.landscape-picture {
+  border: 5px solid black;
+  height: 250px;
+
+}
+
+.name-box {
+  border: 5px solid black;
+  height: 100px;
+  @include profile-box-settings;
+}
+
+.profile-column {
+  flex: 50%;
+  max-width: 50%;
+}
+
+.profile-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: stretch;
+}
+
+.profile-favorite {
+  height: 25%;
+}
+
+.profile-gallery {
+  height: 25%;
+}
+
+.quiz-box {
+  border: 5px solid black;
+  height: 200px;
+  @include profile-box-settings;
+}
+
+.quote-box {
+  border: 5px solid black;
+  height: 300px;
+  @include profile-box-settings;
+}
+
+.simple-box {
+  background-color: $simple-box-default;
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  height: 200px;
+}
+
+.user-profile-pic {
+  border: 5px solid white;
+  border-radius: 100px;
+  height: 280px;
+  position: absolute;
+  top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0
 }
