@@ -2,6 +2,12 @@ $fauno: 'Fauna One', serif;
 $playfair-display: 'Playfair Display', serif;
 $simple-box-default: #86B991;
 
+@mixin profile-box-settings {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 // ROOT PAGE
 .dancing-photo {
   display: block;
@@ -105,16 +111,19 @@ $simple-box-default: #86B991;
 
 .calendar-box {
   border: 5px solid black;
+  @include profile-box-settings;
 }
 
 .favorites-box {
   border: 5px solid black;
   height: 300px;
+  @include profile-box-settings;
 }
 
 .gallery-box {
   border: 5px solid black;
   height: 250px;
+  @include profile-box-settings;
 }
 
 .landscape-picture {
@@ -126,6 +135,7 @@ $simple-box-default: #86B991;
 .name-box {
   border: 5px solid black;
   height: 100px;
+  @include profile-box-settings;
 }
 
 .profile-column {
@@ -139,14 +149,24 @@ $simple-box-default: #86B991;
   align-content: stretch;
 }
 
+.profile-favorite {
+  height: 25%;
+}
+
+.profile-gallery {
+  height: 25%;
+}
+
 .quiz-box {
   border: 5px solid black;
   height: 200px;
+  @include profile-box-settings;
 }
 
 .quote-box {
   border: 5px solid black;
   height: 300px;
+  @include profile-box-settings;
 }
 
 .simple-box {
