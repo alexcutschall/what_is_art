@@ -12,7 +12,6 @@ describe 'as a user' do
       expect(page).to have_content("#{user.username}")
       expect(page).to have_content("Favorites")
       expect(page).to have_content("Quote of the Day")
-      expect(page).to have_content("Calendar")
     end
   end
 end

@@ -1,14 +1,16 @@
 <div class="landscape-picture">
-  top profile box goes here
+  <%= image_tag image_url('forest.jpg'), class: 'profile-landscape' %>
 </div>
 <%= image_tag @user.profile_pic.url, class: 'user-profile-pic' %>
 <div class="simple-box">
+  Favorites
 </div>
 
 <div class="profile-container">
   <div class="profile-column">
     <div class="name-box">
       <%= @user.username %>
+      <%= link_to "Edit Profile", edit_user_path(@user) %>
     </div>
 
     <div class="quote-box">
