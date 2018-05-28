@@ -10,11 +10,11 @@ describe 'as a user' do
       click_on "Edit Profile"
 
       expect(current_path).to eq("/users/#{user.id}/edit")
-      fill_in "user[username]", with: "Harley Quinn"
+      fill_in "user[username]", with: "Harley"
       click_on "Update Profile!"
 
       expect(current_path).to eq("/users/#{user.id}")
-      expect(page).to have_content("Harley Quinn")
+      expect(page).to have_content("Harley")
     end
   end
 end

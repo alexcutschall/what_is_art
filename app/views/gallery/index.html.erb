@@ -1,18 +1,7 @@
 <h1>Gallery</h1>
 Search
 <% @search_artworks.each do |artwork| %>
-  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-    <!-- ID: <%= artwork.id %><br>
-    Title: <%= artwork.title %><br>
-    Category: <%= artwork.category %><br>
-    Medium: <%= artwork.medium %><br>
-    Date: <%= artwork.date %><br>
-    Series: <%= artwork.series %><br>
-    Literature: <%= artwork.literature %><br>
-    Collecting Institution:<%= artwork.collecting_institution %><br>
-    Artist: <%= artwork.artist %><br>
-    Similar Artworks <%= artwork.similar_artworks %><br>
-    Gene: <%= artwork.gene %><br> -->
-    <%= image_tag (artwork.image) %><br>
+  <div class="grid artwork" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
+    <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %><br>
   </div>
 <% end %>

@@ -15,7 +15,7 @@ describe 'as a user' do
       click_on 'Login'
 
       expect(current_path).to eq("/users/#{user.id}")
-      expect(page).to have_content("#{user.username}")
+      expect(page).to have_content("#{user.username.capitalize}")
     end
   end
 end
