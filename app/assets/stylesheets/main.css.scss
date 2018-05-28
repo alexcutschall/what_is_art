@@ -76,8 +76,9 @@ $simple-box-default: #86B991;
 }
 
 .login-form {
-  text-align: center;
-  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-logo {
@@ -87,6 +88,10 @@ $simple-box-default: #86B991;
   margin-left: auto;
   margin-right: auto;
   width: 200px;
+}
+
+.profile-pic-box {
+  font-size: 20px;
 }
 
 .side-button {
