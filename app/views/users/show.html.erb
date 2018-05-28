@@ -9,12 +9,14 @@
 <div class="profile-container">
   <div class="profile-column">
     <div class="name-box">
-      <%= @user.username %>
+      <%= @user.username.capitalize %><br>
       <%= link_to "Edit Profile", edit_user_path(@user) %>
     </div>
 
     <div class="quote-box">
-      Quote of the Day
+      <h1>Quote of the Day</h1><br>
+      <%= @quote.text %><br><br>
+      -<%= @quote.author %><br>
     </div>
 
     <div class="quiz-box">

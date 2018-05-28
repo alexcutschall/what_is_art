@@ -1,6 +1,9 @@
 $fauno: 'Fauna One', serif;
 $playfair-display: 'Playfair Display', serif;
 $simple-box-default: #86B991;
+$favorite-box-background: #ff6456;
+$quote-of-the-day-background: #5456ea;
+$calendar-background: #eaea54;
 
 @mixin profile-box-settings {
   align-items: center;
@@ -56,6 +59,14 @@ $simple-box-default: #86B991;
   margin-left: 20px;
   margin-top: 20px;
   width: 100px;
+}
+
+//GALLERY PAGE
+.grid-item {
+  width: 200px;
+}
+.grid-item--width2 {
+  width: 400px;
 }
 
 //LOGIN PAGE
@@ -115,12 +126,14 @@ $simple-box-default: #86B991;
 }
 
 .calendar-box {
+  background-color: $calendar-background;
   border: 5px solid black;
   height: 30%;
   @include profile-box-settings;
 }
 
 .favorites-box {
+  background-color: $favorite-box-background;
   border: 5px solid black;
   height: 30%;
   @include profile-box-settings;
@@ -145,12 +158,14 @@ $simple-box-default: #86B991;
 .name-box {
   border: 5px solid black;
   height: 25%;
+  flex-direction: column;
+  font-family: $fauno;
+  font-size: 40px;
   @include profile-box-settings;
 }
 
 .profile-column {
   flex: 50%;
-  max-width: 50%;
 }
 
 .profile-container {
@@ -169,7 +184,7 @@ $simple-box-default: #86B991;
 }
 
 .profile-landscape {
-
+  width: 100vw;
 }
 
 .quiz-box {
@@ -179,9 +194,16 @@ $simple-box-default: #86B991;
 }
 
 .quote-box {
+  background-color: $quote-of-the-day-background;
   border: 5px solid black;
+  color: white;
+  flex-direction: column;
+  font-family: $fauno;
+  font-size: 19px;
   height: 50%;
   @include profile-box-settings;
+  padding: 30px;
+  text-align: center;
 }
 
 .simple-box {

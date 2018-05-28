@@ -24,6 +24,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @quote = QuoteSearch.new.quote
   end
 
   def update
