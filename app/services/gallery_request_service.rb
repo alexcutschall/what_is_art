@@ -3,16 +3,16 @@ class GalleryRequestService
     @user = user
   end
 
-  def connection
-    Faraday.new('https://api.artsy.net')
-  end
-
   def raw_artworks
     JSON.parse(api_request, symbolize_names: true)
   end
 
   private
   attr_reader :user
+
+  def connection
+    Faraday.new('https://api.artsy.net')
+  end
 
   def api_request
     response = connection.get do |req|
