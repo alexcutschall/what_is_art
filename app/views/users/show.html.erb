@@ -14,26 +14,29 @@
     </div>
 
     <div class="quote-box">
-      <h1>Quote of the Day</h1><br>
+      <h2>Quote of the Day</h2><br>
       <%= @quote.text %><br><br>
       -<%= @quote.author %><br>
     </div>
 
     <div class="quiz-box">
-      Quiz of the Day
+      <h2>Quiz of the Day</h2>
     </div>
   </div>
 
   <div class="profile-column">
     <div class="favorites-box">
+      <h2>Favorites</h2>
       <%= image_tag image_url('favorite.png'), class: 'profile-favorite' %>
     </div>
 
     <div class="gallery-box">
+      <h2>Gallery</h2>
       <%= link_to image_tag(image_url('gallery.png'), class: 'profile-gallery'), gallery_path %>
     </div>
 
     <div class="calendar-box">
+      <h2>Calendar</h2>
       <%= image_tag image_url('calendar.png'), class: 'calendar' %>
     </div>
 
