@@ -1,7 +1,7 @@
 <h1>Gallery</h1>
 Search
 <% @search_artworks.each do |artwork| %>
-  <div class="artwork">
+  <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
     ID: <%= artwork.id %><br>
     Title: <%= artwork.title %><br>
     Category: <%= artwork.category %><br>

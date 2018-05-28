@@ -58,6 +58,14 @@ $simple-box-default: #86B991;
   width: 100px;
 }
 
+//GALLERY PAGE
+.grid-item {
+  width: 200px;
+}
+.grid-item--width2 {
+  width: 400px;
+}
+
 //LOGIN PAGE
 .login-background {
   background-image: image-url('blue-texture.jpg');
