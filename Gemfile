@@ -15,6 +15,7 @@ gem 'figaro'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt'
 gem 'paperclip'
+gem 'faraday'
 
 group :development, :test do
   gem 'rspec-rails'

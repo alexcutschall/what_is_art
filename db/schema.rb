@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_05_24_114814) do
+ActiveRecord::Schema.define(version: 2018_05_28_143027) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_05_24_114814) do
     t.string "profile_pic_content_type"
     t.integer "profile_pic_file_size"
     t.datetime "profile_pic_updated_at"
+    t.string "x_app_token"
   end
 
 end

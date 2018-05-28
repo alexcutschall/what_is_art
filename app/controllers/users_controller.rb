@@ -1,3 +1,5 @@
+require 'net/http'
+
 class UsersController < ApplicationController
   def new
     @user = User.new
@@ -6,6 +8,10 @@ class UsersController < ApplicationController
   def create
     if params[:user][:password] == (params[:user][:password_confirmation])
       @user = User.new(user_params)
+      api_url = URI.parse('https://api.artsy.net/api/tokens/xapp_token')
+      response = Net::HTTP.post_form(api_url, client_id: ENV['ARTSY_CLIENT_ID'], client_secret: ENV['ARTSY_SECRET'])
+      xapp_token = JSON.parse(response.body)['token']
+      @user.x_app_token = xapp_token
       if @user.save
         flash[:success] = "Thanks for signing up, #{@user.username}"
         redirect_to user_path(@user)
