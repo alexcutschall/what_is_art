@@ -9,7 +9,7 @@ describe 'as a user' do
 
       visit gallery_path
 
-      expect(page).to have_css('artwork', count: 5)
+      expect(page).to have_css('.artwork', count: 5)
       expect(page).to have_content('Gallery')
       expect(page).to have_content('Search')
     end
