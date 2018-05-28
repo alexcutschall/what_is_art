@@ -1,5 +1,5 @@
-<footer>
-  <%= image_tag image_url('gallery.png'), class: '' %>
-  <%= image_tag image_url('favorite.png'), class: '' %>
-  <%= image_tag image_url('question_mark.png'), class: '' %>
+<footer class="footer">
+    <%= link_to (image_tag image_url('gallery.png'), class: 'footer-images'), gallery_path %><br>
+    <%= link_to (image_tag image_url('favorite.png'), class: 'footer-images'), user_path(current_user) %><br>
+    <%= link_to (image_tag image_url('question_mark.png'), class: 'footer-images'), user_path(current_user) %><br>
 </footer>

@@ -11,54 +11,42 @@ $calendar-background: #eaea54;
   justify-content: center;
 }
 
-// ROOT PAGE
-.dancing-photo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
-}
-
-.header-style {
-  font-family: $playfair-display;
-  font-size: 100px;
-  margin-top: 50px;
+//ARTWORK SHOW PAGE
+.artwork-information {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  font-family: $fauno;
 }
 
-.login-box {
-  text-align: center;
+.artwork-background {
+  background-image: image-url('grey-texture.jpg');
+  background-size: contain;
 }
 
-.login-button {
-   background: -webkit-linear-gradient(top, #bcd93b, #65a9d7);
-   color: white;
-   font-size: 50px;
-   font-family: $playfair-display;
-   margin-top: 100px;
-   padding: 20px 300px;
-   text-decoration: none;
-   text-shadow: rgba(0,0,0,.4) 0 1px 0;
-   vertical-align: middle;
-   -webkit-border-radius: 40px;
-   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
-   }
+.artwork-box {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+}
 
-.login-button:hover {
-   border-top-color: #28597a;
-   background: #28597a;
-   color: #ccc;
-   }
+.artwork-picture {
+  height: 500px;
+}
 
-.login-button:active {
-   border-top-color: #1b435e;
-   background: #1b435e;
-   }
+//FOOTER
+.footer {
+  bottom: 0;
+  display: flex;
+  height: 220px;
+  position: absolute;
+}
 
-.logo {
-  margin-left: 20px;
-  margin-top: 20px;
-  width: 100px;
+.footer-images {
+  height: 200px;
+  padding-left: 80px;
+  padding-right: 50px;
 }
 
 //GALLERY PAGE
@@ -119,6 +107,57 @@ $calendar-background: #eaea54;
   bottom: 250px;
   left: -150px;
 }
+
+// ROOT PAGE
+.dancing-photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.header-style {
+  font-family: $playfair-display;
+  font-size: 100px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.login-box {
+  text-align: center;
+}
+
+.login-button {
+   background: -webkit-linear-gradient(top, #bcd93b, #65a9d7);
+   color: white;
+   font-size: 50px;
+   font-family: $playfair-display;
+   margin-top: 100px;
+   padding: 20px 300px;
+   text-decoration: none;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   vertical-align: middle;
+   -webkit-border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   }
+
+.login-button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+
+.login-button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.logo {
+  margin-left: 20px;
+  margin-top: 20px;
+  width: 100px;
+}
+
 
 //USER PROFILE PAGE
 .calendar {
