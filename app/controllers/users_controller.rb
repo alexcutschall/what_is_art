@@ -13,6 +13,7 @@ class UsersController < ApplicationController
       xapp_token = JSON.parse(response.body)['token']
       @user.x_app_token = xapp_token
       if @user.save
+        session[:user_id] = @user.id
         flash[:success] = "Thanks for signing up, #{@user.username}"
         redirect_to user_path(@user)
       else
