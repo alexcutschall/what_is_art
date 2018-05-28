@@ -8,7 +8,9 @@ $calendar-background: #eaea54;
 @mixin profile-box-settings {
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  font-family: $fauno;
 }
 
 //ARTWORK SHOW PAGE
@@ -174,12 +176,14 @@ $calendar-background: #eaea54;
 .favorites-box {
   background-color: $favorite-box-background;
   border: 5px solid black;
+  font-size: 25px;
   height: 30%;
   @include profile-box-settings;
 }
 
 .gallery-box {
   border: 5px solid black;
+  font-size: 25px;
   height: 40%;
   @include profile-box-settings;
 }
@@ -197,8 +201,6 @@ $calendar-background: #eaea54;
 .name-box {
   border: 5px solid black;
   height: 25%;
-  flex-direction: column;
-  font-family: $fauno;
   font-size: 40px;
   @include profile-box-settings;
 }
@@ -236,8 +238,6 @@ $calendar-background: #eaea54;
   background-color: $quote-of-the-day-background;
   border: 5px solid black;
   color: white;
-  flex-direction: column;
-  font-family: $fauno;
   font-size: 19px;
   height: 50%;
   @include profile-box-settings;
