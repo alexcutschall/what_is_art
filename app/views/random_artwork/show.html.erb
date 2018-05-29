@@ -1,7 +1,8 @@
 <html class="artwork-background">
+<%= render "partials/header" %>
   <div class="artwork-box">
     <%= image_tag @random_artwork.image, class: 'artwork-picture' %>
-  </div><br>
+  </div>
   <div class="artwork-information">
     Title: <%= @random_artwork.title %><br>
     Category: <%= @random_artwork.category %><br>
@@ -13,7 +14,7 @@
     Artist: <%= @random_artwork.artist %><br>
     Similar Artworks: <%= @random_artwork.similar_artworks %><br>
     Gene: <%= @random_artwork.gene %><br>
+    <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
   </div>
-  <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
   <%= render "partials/footer" %>
 <html>
