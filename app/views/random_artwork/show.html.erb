@@ -1,0 +1,19 @@
+<html class="artwork-background">
+  <div class="artwork-box">
+    <%= image_tag @random_artwork.image, class: 'artwork-picture' %>
+  </div><br>
+  <div class="artwork-information">
+    Title: <%= @random_artwork.title %><br>
+    Category: <%= @random_artwork.category %><br>
+    Medium: <%= @random_artwork.medium %><br>
+    Date: <%= @random_artwork.date %><br>
+    Series: <%= @random_artwork.series %><br>
+    Literature: <%= @random_artwork.literature %><br>
+    Collecting Institution:<%= @random_artwork.collecting_institution %><br>
+    Artist: <%= @random_artwork.artist %><br>
+    Similar Artworks: <%= @random_artwork.similar_artworks %><br>
+    Gene: <%= @random_artwork.gene %><br>
+  </div>
+
+  <%= render "partials/footer" %>
+<html>

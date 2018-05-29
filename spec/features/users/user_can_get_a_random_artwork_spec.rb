@@ -8,8 +8,8 @@ describe 'as a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit user_path(user)
       click_on "I'm Feeling Artsy"
-      binding.pry
-      expect(page).to have_css('artwork-information', count: 1)
+
+      expect(page).to have_css('.artwork-information', count: 1)
       expect(page).to have_content("Title")
       expect(page).to have_content("Medium")
       expect(page).to have_content("Date")

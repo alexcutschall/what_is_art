@@ -1,6 +1,5 @@
 class RandomArtworkController < ApplicationController
   def show
-    @artwork = RandomArtworkSearch.new(current_user).artwork
-    redirect_to 'artwork/show'
+    @random_artwork = RandomArtworkSearch.new(current_user).artwork
   end
 end
