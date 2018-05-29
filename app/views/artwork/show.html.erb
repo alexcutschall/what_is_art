@@ -11,7 +11,7 @@
     Series: <%= @artwork.series %><br>
     Literature: <%= @artwork.literature %><br>
     Collecting Institution:<%= @artwork.collecting_institution %><br>
-    Artist: <%= @artwork.artist %><br>
+    Artist: <%= link_to "Go to Artists Page", artist_path(@artwork.id) %><br>
     Similar Artworks: <%= @artwork.similar_artworks %><br>
     Gene: <%= @artwork.gene %><br>
   </div>
