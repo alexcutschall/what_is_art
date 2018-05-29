@@ -1,0 +1,21 @@
+<html class="artwork-background">
+<%= render "partials/header" %>
+<% @similar_artworks.each do |artwork| %>
+  <div class="artwork-box">
+    <%= image_tag artwork.image, class: 'artwork-picture' %>
+  </div>
+  <div class="artwork-information">
+    Title: <%= artwork.title %><br>
+    Category: <%= artwork.category %><br>
+    Medium: <%= artwork.medium %><br>
+    Date: <%= artwork.date %><br>
+    Series: <%= artwork.series %><br>
+    Literature: <%= artwork.literature %><br>
+    Collecting Institution:<%= artwork.collecting_institution %><br>
+    Artist: <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
+    Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
+    Gene: <%= artwork.gene %><br>
+  </div>
+  <% end %>
+  <%= render "partials/footer" %>
+<html>

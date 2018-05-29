@@ -12,7 +12,7 @@
     Literature: <%= @artwork.literature %><br>
     Collecting Institution:<%= @artwork.collecting_institution %><br>
     Artist: <%= link_to "Go to Artists Page", artist_path(@artwork.id) %><br>
-    Similar Artworks: <%= @artwork.similar_artworks %><br>
+    Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(@artwork.id) %><br>
     Gene: <%= @artwork.gene %><br>
   </div>
 
