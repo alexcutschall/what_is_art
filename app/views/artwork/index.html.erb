@@ -2,7 +2,7 @@
 <%= render "partials/header" %>
 <% @similar_artworks.each do |artwork| %>
   <div class="artwork-box">
-    <%= image_tag artwork.image, class: 'artwork-picture' %>
+    <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %><br>
   </div>
   <div class="artwork-information">
     Title: <%= artwork.title %><br>
