@@ -15,22 +15,24 @@ $calendar-background: #eaea54;
 
 //ARTWORK SHOW PAGE
 .artwork-information {
-  align-items: center;
-  display: flex;
-  justify-content: center;
+  border: 5px solid black;
+  @include profile-box-settings;
+  font-size: 20px;
+  padding: 20px;
   text-align: center;
-  font-family: $fauno;
+
 }
 
 .artwork-background {
-  background-image: image-url('grey-texture.jpg');
-  background-size: contain;
+  background-color: #b7b7b7;
 }
 
 .artwork-box {
+  background-image: image-url('grey-texture.jpg');
+  background-size: contain;
   display: flex;
   justify-content: center;
-  margin-top: 200px;
+  padding: 50px;
 }
 
 .artwork-picture {
@@ -57,6 +59,26 @@ $calendar-background: #eaea54;
 }
 .grid-item--width2 {
   width: 400px;
+}
+
+//HEADER PARTIAL
+.header {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100px;
+  justify-content: center;
+  color: white;
+  padding-right: 80px;
+}
+
+.header-logo {
+  height: 100px;
+}
+
+.header-text {
+  font-family: $playfair-display;
+  font-size: 50px;
 }
 
 //LOGIN PAGE

@@ -1,8 +1,8 @@
 <html class="artwork-background">
+<%= render "partials/header" %>
   <div class="artwork-box">
     <%= image_tag @artwork.image, class: 'artwork-picture' %>
-  </div><br>
-
+  </div>
   <div class="artwork-information">
     Title: <%= @artwork.title %><br>
     Category: <%= @artwork.category %><br>
