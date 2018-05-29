@@ -5,6 +5,7 @@ describe 'as a user' do
     it 'shows them a random artwork' do
       user = User.create(username: 'Deadpool', password: 'Merc', x_app_token: ENV['USER_XAPP_TOKEN'])
 
+      allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit user_path(user)
       click_on "I'm Feeling Artsy"
       binding.pry
