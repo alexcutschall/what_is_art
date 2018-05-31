@@ -1,10 +1,12 @@
 <h1>Gallery</h1>
 Search
 <% @search_artworks.each do |artwork| %>
-  <div class="card-columns artwork">
-    <div class="card">
-      <%= image_tag(artwork.image, class: 'card-img-top')  %>
+  <% present(artwork) do |artwork| %>
+    <div class="card-columns artwork">
+      <div class="card">
+        <%= image_tag(artwork.image, class: 'card-img-top')  %>
+      </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
 <%= render 'partials/footer' %>

@@ -1,20 +1,22 @@
 <html class="artwork-background">
-<%= render "partials/header" %>
-<% @artists.each do |artist| %>
-  <div class="artwork-box">
-    <%= image_tag artist.image, class: 'artwork-picture' %>
-  </div>
-  <div class="artwork-information">
-    Name: <%= artist.name %><br>
-    Birthday: <%= artist.birthday %><br>
-    Deathday: <%= artist.deathday %><br>
-    Hometown: <%= artist.hometown %><br>
-    Location: <%= artist.location %><br>
-    Nationality: <%= artist.nationality %><br>
-    Similar Artists: <%= artist.similar_artists %><br>
-    Similar Contemporary Artists: <%= artist.similar_contemporary_artists %><br>
-    Genes: <%= artist.genes %><br>
-  </div>
+  <%= render "partials/header" %>
+  <% @artists.each do |artist| %>
+    <% present(artist) do |artist| %>
+      <div class="artwork-box">
+      <%= image_tag artist.image, class: 'artwork-picture' %>
+      </div>
+      <div class="artwork-information">
+        Name: <%= artist.name %><br>
+        Birthday: <%= artist.birthday %><br>
+        Deathday: <%= artist.deathday %><br>
+        Hometown: <%= artist.hometown %><br>
+        Location: <%= artist.location %><br>
+        Nationality: <%= artist.nationality %><br>
+        Similar Artists: <%= artist.similar_artists %><br>
+        Similar Contemporary Artists: <%= artist.similar_contemporary_artists %><br>
+        Genes: <%= artist.genes %><br>
+      </div>
+    <% end %>
   <% end %>
   <%= render "partials/footer" %>
 <html>
