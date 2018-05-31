@@ -1,7 +1,7 @@
 class ArtworkPresenter < BasePresenter
 
   def image
-    if @model.image != nil
+    if @model.image != "" || nil
       @model.image
     else
       "https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fitfunnylife.files.wordpress.com%2F2008%2F06%2Ffunny-dogs-img_1.jpg&f=1"
@@ -9,7 +9,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def title
-    if @model.title != nil
+    if @model.title != ""
       @model.title
     else
       "Title Unavailable"
@@ -17,7 +17,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def category
-    if @model.category != nil
+    if @model.category != ""
       @model.category
     else
       "Category Unknown"
@@ -25,7 +25,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def medium
-    if @model.medium != nil
+    if @model.medium != ""
       @model.medium
     else
       "Medium Unknown"
@@ -33,31 +33,31 @@ class ArtworkPresenter < BasePresenter
   end
 
   def date
-    if @model.date != nil
+    if @model.date != ""
       @model.date
     else
-      "Date Unknown"
+      "Unknown"
     end
   end
 
   def series
-    if @model.series != nil
+    if @model.series != ""
       @model.series
     else
-      "Series Unknown"
+      "Unknown"
     end
   end
 
   def literature
-    if @model.literature != nil
+    if @model.literature != ""
       @model.literature
     else
-      "Literature Unknown"
+      "Unknown"
     end
   end
 
   def collecting_institution
-    if @model.collecting_institution != nil
+    if @model.collecting_institution != ""
       @model.collecting_institution
     else
       "Collecting Institution Unknown"
@@ -65,7 +65,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def artist
-    if @model.artist != nil
+    if @model.artist != ""
       @model.artist
     else
       "Artist Unknown"
@@ -73,7 +73,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def similar_artworks
-    if @model.similar_artworks != nil
+    if @model.similar_artworks != ""
       @model.similar_artworks
     else
       "Similar Artworks Unknown"
@@ -81,7 +81,7 @@ class ArtworkPresenter < BasePresenter
   end
 
   def genes
-    if @model.gene != nil
+    if @model.gene != ""
       @model.gene
     else
       "Similar Genes Unknown"
