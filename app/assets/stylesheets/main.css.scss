@@ -43,8 +43,9 @@ $calendar-background: #eaea54;
 .footer {
   bottom: 0;
   display: flex;
+  left: 0;
   height: 220px;
-  position: absolute;
+  position: fixed;
 }
 
 .footer-images {
