@@ -13,7 +13,7 @@
     Collecting Institution:<%= @random_artwork.collecting_institution %><br>
     Artist: <%= link_to "Go to Artists Page", artist_path(@random_artwork.id) %><br>
     Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(@random_artwork.id) %><br>
-    Gene: <%= link_to "Learn More About The Genes/Categories!", gene_path(@random_artwork.id) %><br>
+    Gene: <%= link_to "Learn More About The Genes/Categories!", genes_path(@random_artwork.id) %><br>
     <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
   </div>
   <%= render "partials/footer" %>

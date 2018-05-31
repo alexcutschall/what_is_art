@@ -25,7 +25,6 @@ class GeneSearchService
   end
 
   def parsed_api_request
-    binding.pry
     JSON.parse(api_request, symbolize_names: true)[:_embedded][:genes]
   end
 end

@@ -5,7 +5,9 @@ class GeneSearch
   end
 
   def genes
-    request
+    request.map do |information|
+      Gene.new(information)
+    end
   end
 
   private
