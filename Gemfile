@@ -16,6 +16,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bcrypt'
 gem 'paperclip'
 gem 'faraday'
+gem 'jquery-rails'
 
 group :development, :test do
   gem 'rspec-rails'

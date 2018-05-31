@@ -55,8 +55,20 @@ $calendar-background: #eaea54;
 }
 
 //GALLERY PAGE
+.card {
+
+}
+.card-columns {
+  display: inline-block;
+}
+.grid {
+
+}
 .grid-item {
-  width: 200px;
+  float: left;
+  width: 80px;
+  height: 60px;
+  border: 2px solid hsla(0, 0%, 0%, 0.5);
 }
 .grid-item--width2 {
   width: 400px;
