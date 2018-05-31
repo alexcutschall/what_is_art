@@ -1,8 +1,9 @@
 <h1>Gallery</h1>
 Search
 <% @search_artworks.each do |artwork| %>
-  <div class="grid artwork" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 200 }'>
-    <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %><br>
+  <div class="grid artwork">
+    <div class="grid-item"><%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %>
+    </div>
   </div>
 <% end %>
 <%= render 'partials/footer' %>

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get '/artworks/:id', to: 'artwork#index', as: 'artworks'
   get '/random-artwork', to: 'random_artwork#show', as: 'sample_artwork'
   get '/artist/:id', to: 'artists#show', as: 'artist'
+  get '/genes/:id', to: 'genes#index', as: 'genes'
 
   resources :users
 end

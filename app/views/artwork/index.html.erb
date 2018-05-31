@@ -2,7 +2,7 @@
 <%= render "partials/header" %>
 <% @similar_artworks.each do |artwork| %>
   <div class="artwork-box">
-    <%= image_tag artwork.image, class: 'artwork-picture' %>
+    <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %><br>
   </div>
   <div class="artwork-information">
     Title: <%= artwork.title %><br>
@@ -14,7 +14,7 @@
     Collecting Institution:<%= artwork.collecting_institution %><br>
     Artist: <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
     Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
-    Gene: <%= artwork.gene %><br>
+    Gene: <%= link_to "Learn More About The Genes/Categories!", genes_path(artwork.id) %><br>
   </div>
   <% end %>
   <%= render "partials/footer" %>
