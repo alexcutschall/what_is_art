@@ -2,7 +2,7 @@
 <%= render "partials/header" %>
   <div class="artwork-information">
     <% @genes.each do |gene| %>
-      <% presenter(gene) do |gene| %>
+      <% present(gene) do |gene| %>
         Display Name: <%= gene.name %>
         Description: <%= gene.description %>
         Artworks: <%= gene.artworks %>

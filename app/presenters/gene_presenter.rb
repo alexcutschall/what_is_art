@@ -1,7 +1,7 @@
 class GenePresenter < BasePresenter
 
   def name
-    if @model.name?
+    if @model.name != nil
       @model.name
     else
       "Name Unknown"
@@ -9,7 +9,7 @@ class GenePresenter < BasePresenter
   end
 
   def description
-    if @model.description?
+    if @model.description != nil
       @model.description
     else
       "Description Unknown"
@@ -17,14 +17,14 @@ class GenePresenter < BasePresenter
   end
 
   def artworks
-    if @model.artworks?
+    if @model.artworks != nil
       @model.artworks
     else
       "Artworks Unknown"
     end
 
     def artists
-      if @model.artists?
+      if @model.artists != nil
         @model.artists?
       else
         "Artists Unknown"
