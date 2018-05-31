@@ -1,46 +1,45 @@
-<div class="landscape-picture">
-  <%= image_tag image_url('forest.jpg'), class: 'profile-landscape' %>
-</div>
-<%= image_tag @user.profile_pic.url, class: 'user-profile-pic' %>
-<div class="simple-box">
-  <p class="simple-text">Favorites: 0</p>
-</div>
-
-<div class="profile-container">
-  <div class="profile-column">
-    <div class="name-box">
-      <%= @user.username.capitalize %><br>
-      <%= link_to "Edit Profile", edit_user_path(@user) %>
-    </div>
-
-    <div class="quote-box">
-      <h2>Quote of the Day</h2><br>
-      <%= @quote.text %><br><br>
-      -<%= @quote.author %><br>
-    </div>
-
-    <div class="quiz-box">
-      <h2>Quiz of the Day</h2>
-    </div>
+<% present @user do |user| %>
+  <div class="landscape-picture">
+    <%= image_tag image_url('forest.jpg'), class: 'profile-landscape' %>
+  </div>
+  <%= image_tag (user.profile_pic), class: 'user-profile-pic' %>
+  <div class="simple-box">
+    <p class="simple-text">Favorites: 0</p>
   </div>
 
-  <div class="profile-column">
-    <div class="favorites-box">
-      <h2>Favorites</h2>
-      <%= image_tag image_url('favorite.png'), class: 'profile-favorite' %>
+  <div class="profile-container">
+    <div class="profile-column">
+      <div class="name-box">
+        <%= user.username %><br>
+        <%= link_to "Edit Profile", edit_user_path(user) %>
+      </div>
+
+      <div class="quote-box">
+        <h2>Quote of the Day</h2><br>
+        <%= @quote.text %><br><br>
+        -<%= @quote.author %><br>
+      </div>
+
+      <div class="quiz-box">
+        <h2>Quiz of the Day</h2>
+      </div>
     </div>
 
-    <div class="gallery-box">
-      <h2>Gallery</h2>
-      <%= link_to image_tag(image_url('gallery.png'), class: 'profile-gallery'), gallery_path %>
-    </div>
+    <div class="profile-column">
+      <div class="favorites-box">
+        <h2>Favorites</h2>
+        <%= image_tag image_url('favorite.png'), class: 'profile-favorite' %>
+      </div>
 
-    <div class="calendar-box">
-      <!-- <h2>Calendar</h2>
-      <%= image_tag image_url('calendar.png'), class: 'calendar' %> -->
-      <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
-    </div>
+      <div class="gallery-box">
+        <h2>Gallery</h2>
+        <%= link_to image_tag(image_url('gallery.png'), class: 'profile-gallery'), gallery_path %>
+      </div>
 
+      <div class="calendar-box">
+        <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
+      </div>
+
+    </div>
   </div>
-
-</div>
+<% end %>
