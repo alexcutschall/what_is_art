@@ -4,7 +4,7 @@ Search
   <% present(artwork) do |artwork| %>
     <div class="card-columns artwork">
       <div class="card">
-        <%= image_tag(artwork.image, class: 'card-img-top')  %>
+        <%= link_to image_tag(artwork.image, class: 'card-img-top'), artwork_path(artwork.id)  %>
       </div>
     </div>
   <% end %>
