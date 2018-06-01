@@ -1,5 +1,9 @@
 class ArtworkPresenter < BasePresenter
 
+  def id
+    @model.id
+  end
+
   def image
     if @model.image != "" || nil
       @model.image
