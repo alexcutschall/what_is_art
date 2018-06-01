@@ -94,7 +94,7 @@ $calendar-background: #eaea54;
   font-size: 50px;
 }
 
-//LOGIN PAGE
+//LOGIN + SIGNUP PAGE
 .login-background {
   background-image: image-url('blue-texture.jpg');
   background-size: cover;
@@ -132,7 +132,16 @@ $calendar-background: #eaea54;
 }
 
 .profile-pic-box {
-  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: $playfair-display;
+  font-size: 30px;
+}
+
+.profile-pic-link {
+  position: relative;
+  right: -120px;
 }
 
 .side-button {
@@ -161,11 +170,15 @@ $calendar-background: #eaea54;
 .header-style {
   font-family: $playfair-display;
   font-size: 100px;
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: center;
 }
 
 .login-box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -20px;
   text-align: center;
 }
 
@@ -174,7 +187,7 @@ $calendar-background: #eaea54;
    color: white;
    font-size: 50px;
    font-family: $playfair-display;
-   margin-top: 100px;
+   margin: 0 20px;
    padding: 20px 300px;
    text-decoration: none;
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
@@ -196,9 +209,35 @@ $calendar-background: #eaea54;
 
 .logo {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
   width: 100px;
 }
+
+.signup-button {
+   background: -webkit-linear-gradient(top, #bcd93b, #65a9d7);
+   color: white;
+   font-size: 50px;
+   font-family: $playfair-display;
+   margin: 20px;
+   margin-bottom: 30px;
+   padding: 20px 280px;
+   text-decoration: none;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   vertical-align: middle;
+   -webkit-border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   }
+
+.signup-button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+
+.signup-button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
 
 
 //USER PROFILE PAGE

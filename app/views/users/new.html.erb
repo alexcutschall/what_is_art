@@ -12,8 +12,10 @@
         <%= hidden_field_tag :password_confirmation %>
         <%= f.password_field :password_confirmation, {placeholder: "Password Confirmation", class: 'field'} %><br>
 
-        <%= label_tag :profile_picture %>
-        <%= f.file_field :profile_pic, class: "profile-pic-box" %>
+        <div class="profile-pic-box">
+          <p>Choose a Profile Picture</p>
+          <%= f.file_field :profile_pic, {placeholder: "Profile Picture", class: "profile-pic-link"} %>
+        </div>
 
       <%= f.submit "Sign Up!", class: 'field' %>
     </div>
