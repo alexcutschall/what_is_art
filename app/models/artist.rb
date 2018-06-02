@@ -1,10 +1,11 @@
 class Artist
-  attr_reader :name, :birthday, :deathday, :hometown,
+  attr_reader :id, :name, :birthday, :deathday, :hometown,
               :location, :nationality, :image,
               :similar_artists, :similar_contemporary_artists,
               :genes
 
   def initialize(information)
+    @id = information[:id]
     @name = information[:name] if information[:name]
     @birthday = information[:birthday] if information[:birthday]
     @deathday = information[:deathday] if information[:deathday]

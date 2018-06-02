@@ -1,5 +1,8 @@
 class ArtistPresenter < BasePresenter
-
+  def id
+    @model.id
+  end
+  
   def image
     if @model.image != ""
       @model.image

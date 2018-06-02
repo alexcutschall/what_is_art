@@ -14,7 +14,7 @@
         Nationality: <%= artist.nationality %><br>
         Similar Artists: <%= artist.similar_artists %><br>
         Similar Contemporary Artists: <%= artist.similar_contemporary_artists %><br>
-        Genes: <%= artist.genes %><br>
+        Genes: <%= link_to "Learn More About This Artist's Style!", genes_path(artist.id, type: "artist") %><br>
       </div>
     <% end %>
   <% end %>

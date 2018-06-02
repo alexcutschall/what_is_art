@@ -8,9 +8,8 @@ describe 'as a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit gallery_path
 
-      visit '/artists/4d8b92eb4eb68a1b2c000968'
-      click_on "Go to Artists Page"
-      click_on "Genes"
+      visit '/artist/4d8b92eb4eb68a1b2c000968'
+      click_on "Learn More About This Artist's Style!"
 
       expect(page).to have_content("Name")
       expect(page).to have_content("Birthday")
