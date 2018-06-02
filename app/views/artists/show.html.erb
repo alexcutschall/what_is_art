@@ -12,7 +12,7 @@
         Hometown: <%= artist.hometown %><br>
         Location: <%= artist.location %><br>
         Nationality: <%= artist.nationality %><br>
-        Similar Artists: <%= artist.similar_artists %><br>
+        Similar Artists: <%= link_to "Similar Artists", artists_path(artist.id, type: "similar") %><br>
         Similar Contemporary Artists: <%= link_to "Similar Contemporary Artists", artists_path(artist.id, type: "contemporary") %><br>
         Genes: <%= link_to "Learn More About This Artist's Style!", genes_path(artist.id, type: "artist") %><br>
       </div>

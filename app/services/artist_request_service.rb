@@ -12,6 +12,10 @@ class ArtistRequestService
     JSON.parse(contemporary_artist_api_request, symbolize_names: true)
   end
 
+  def raw_similar_artists
+    JSON.parse(similar_artist_api_request, symbolize_names: true)
+  end
+
   private
   attr_reader :searchable_id, :user
 
@@ -31,6 +35,15 @@ class ArtistRequestService
   def contemporary_artist_api_request
     response = connection.get do |req|
       req.url "/api/artists?similar_to_artist_id=#{searchable_id}&similarity_type=contemporary"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['X-XAPP-Token'] = user.x_app_token
+    end
+    response.body
+  end
+
+  def similar_artist_api_request
+    response = connection.get do |req|
+      req.url "/api/artists?similar_to_artist_id=#{searchable_id}"
       req.headers['Content-Type'] = 'application/json'
       req.headers['X-XAPP-Token'] = user.x_app_token
     end

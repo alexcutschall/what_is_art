@@ -16,6 +16,12 @@ class ArtistSearch
     end
   end
 
+  def similar_artists
+    similar_artists_parsed_request.map do |information|
+      Artist.new(information)
+    end
+  end
+
   private
   attr_reader :searchable_id, :user
 
@@ -33,6 +39,14 @@ class ArtistSearch
 
   def contemporary_artist_parsed_request
     contemporary_artists_request[:_embedded][:artists]
+  end
+
+  def similar_artists_request
+    ArtistRequestService.new(searchable_id, user).raw_similar_artists
+  end
+
+  def similar_artists_parsed_request
+    similar_artists_request[:_embedded][:artists]
   end
 
 end
