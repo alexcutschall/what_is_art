@@ -6,7 +6,6 @@ class GeneSearch
 
   def artist_genes
     artist_request.map do |information|
-      binding.pry
       Gene.new(information)
     end
   end

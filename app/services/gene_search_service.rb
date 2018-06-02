@@ -29,12 +29,12 @@ class GeneSearchService
   end
 
   def parsed_artwork_api_request
-    JSON.parse(api_request, symbolize_names: true)[:_embedded][:genes]
+    JSON.parse(artwork_api_request, symbolize_names: true)[:_embedded][:genes]
   end
 
-  def arist_api_request
+  def artist_api_request
     response = connection.get do |req|
-      req.url "https://api.artsy.net/api/genes?artwork_id=#{search_id}"
+      req.url "https://api.artsy.net/api/genes?artist_id=#{search_id}"
       req.headers['Content-Type'] = 'application/json'
       req.headers['X-XAPP-Token'] = user.x_app_token
     end
@@ -42,6 +42,6 @@ class GeneSearchService
   end
 
   def parsed_artist_api_request
-    artist_api_request
+    JSON.parse(artist_api_request, symbolize_names: true)[:_embedded][:genes]
   end
 end
