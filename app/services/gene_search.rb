@@ -1,19 +1,29 @@
 class GeneSearch
-  def initialize(user, artwork_id)
+  def initialize(user, search_id)
     @user = user
-    @artwork_id = artwork_id
+    @search_id = search_id
   end
 
-  def genes
-    request.map do |information|
+  def artist_genes
+    artist_request.map do |information|
+      Gene.new(information)
+    end
+  end
+
+  def artwork_genes
+    artwork_request.map do |information|
       Gene.new(information)
     end
   end
 
   private
-  attr_reader :artwork_id, :user
+  attr_reader :search_id, :user
 
-  def request
-    GeneSearchService.new(user, artwork_id).raw_gene_information
+  def artwork_request
+    GeneSearchService.new(user, search_id).raw_artwork_gene_information
+  end
+
+  def artist_request
+    GeneSearchService.new(user, search_id).raw_artist_gene_information
   end
 end

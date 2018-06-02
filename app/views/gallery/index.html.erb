@@ -2,10 +2,8 @@
 Search
 <% @search_artworks.each do |artwork| %>
   <% present(artwork) do |artwork| %>
-    <div class="card-columns artwork">
-      <div class="card image-link">
-        <%= link_to image_tag(artwork.image, class: 'card-img-top'), artwork_path(artwork.id)  %>
-      </div>
+    <div class="artwork">
+      <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link'  %>
     </div>
   <% end %>
 <% end %>

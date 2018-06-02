@@ -8,18 +8,13 @@ describe 'as a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit gallery_path
 
-      within('.image-link') do
-        first('.card-img-top').click
-      end
-      click_on "Go to Artists Page"
-      click_on "Genes"
+      visit '/artist/4d8b92eb4eb68a1b2c000968'
+      click_on "Learn More About This Artist's Style!"
 
-      expect(page).to have_content("Name")
-      expect(page).to have_content("Birthday")
-      expect(page).to have_content("Deathday")
-      expect(page).to have_content("Hometown")
-      expect(page).to have_content("Location")
-      expect(page).to have_content("Nationality")
+      expect(page).to have_content("Display Name")
+      expect(page).to have_content("Description")
+      expect(page).to have_content("Artworks")
+      expect(page).to have_content("Artists")
     end
   end
 end

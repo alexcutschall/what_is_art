@@ -8,10 +8,7 @@ describe 'as a user' do
       allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
       visit gallery_path
 
-      within('.image-link') do
-        first('.card-img-top').click
-      end
-      click_on "Go to Artists Page"
+      visit '/artist/4d8b92eb4eb68a1b2c000968'
       click_on "Similar Artists"
 
       expect(page).to have_content("Name")

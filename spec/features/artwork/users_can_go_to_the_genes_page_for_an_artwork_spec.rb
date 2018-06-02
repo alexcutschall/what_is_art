@@ -9,8 +9,8 @@ describe 'as a user' do
         allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
         visit gallery_path
         first('.image-link').click
-        click_on "Learn More About the Genes/Categories!"
 
+        click_on "Learn More About The Genes/Categories!"
         expect(page).to have_content("Display Name")
         expect(page).to have_content("Description")
         expect(page).to have_content("Artworks")

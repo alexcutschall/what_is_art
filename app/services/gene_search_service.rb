@@ -1,30 +1,47 @@
 class GeneSearchService
-  def initialize(user, artwork_id)
+  def initialize(user, search_id)
     @user = user
-    @artwork_id = artwork_id
+    @search_id = search_id
   end
 
-  def raw_gene_information
-    parsed_api_request
+  def raw_artwork_gene_information
+    parsed_artwork_api_request
+  end
+
+  def raw_artist_gene_information
+    parsed_artist_api_request
   end
 
   private
-  attr_reader :artwork_id, :user
+  attr_reader :search_id, :user
 
   def connection
     Faraday.new('https://api.artsy.net')
   end
 
-  def api_request
+  def artwork_api_request
     response = connection.get do |req|
-      req.url "https://api.artsy.net/api/genes?artwork_id=#{artwork_id}"
+      req.url "https://api.artsy.net/api/genes?artwork_id=#{search_id}"
       req.headers['Content-Type'] = 'application/json'
       req.headers['X-XAPP-Token'] = user.x_app_token
     end
     response.body
   end
 
-  def parsed_api_request
-    JSON.parse(api_request, symbolize_names: true)[:_embedded][:genes]
+  def parsed_artwork_api_request
+    JSON.parse(artwork_api_request, symbolize_names: true)[:_embedded][:genes]
+  end
+
+  def artist_api_request
+    response = connection.get do |req|
+      req.url "https://api.artsy.net/api/genes?artist_id=#{search_id}"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['X-XAPP-Token'] = user.x_app_token
+    end
+    response.body
+  end
+
+  def parsed_artist_api_request
+    JSON.parse(artist_api_request, symbolize_names: true)[:_embedded][:genes]
   end
 end
