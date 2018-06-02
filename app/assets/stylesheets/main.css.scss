@@ -39,6 +39,17 @@ $calendar-background: #eaea54;
   height: 500px;
 }
 
+.artwork-heart {
+  height: 100px;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+}
+
+.filled-heart {
+  background-color: red;
+}
+
 //FOOTER
 .footer {
   bottom: 0;
