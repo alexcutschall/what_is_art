@@ -9,7 +9,8 @@ describe 'as a user' do
 
       visit gallery_path
       first('.image-link').click
-      
+      save_and_open_page
+
       expect(page).to have_content("Title")
       expect(page).to have_content("Category")
       expect(page).to have_content("Medium")
