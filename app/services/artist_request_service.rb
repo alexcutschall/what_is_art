@@ -1,6 +1,6 @@
 class ArtistRequestService
-  def initialize(artwork_id, user)
-    @artwork_id = artwork_id
+  def initialize(searchable_id, user)
+    @searchable_id = searchable_id
     @user = user
   end
 
@@ -8,8 +8,12 @@ class ArtistRequestService
     JSON.parse(api_request, symbolize_names: true)
   end
 
+  def raw_contemporary_artists
+    JSON.parse(contemporary_artist_api_request, symbolize_names: true)
+  end
+
   private
-  attr_reader :artwork_id, :user
+  attr_reader :searchable_id, :user
 
   def connection
     Faraday.new('https://api.artsy.net')
@@ -17,7 +21,16 @@ class ArtistRequestService
 
   def api_request
     response = connection.get do |req|
-      req.url "/api/artists?artwork_id=#{artwork_id}"
+      req.url "/api/artists?artwork_id=#{searchable_id}"
+      req.headers['Content-Type'] = 'application/json'
+      req.headers['X-XAPP-Token'] = user.x_app_token
+    end
+    response.body
+  end
+
+  def contemporary_artist_api_request
+    response = connection.get do |req|
+      req.url "/api/artists?similar_to_artist_id=#{searchable_id}&similarity_type=contemporary"
       req.headers['Content-Type'] = 'application/json'
       req.headers['X-XAPP-Token'] = user.x_app_token
     end

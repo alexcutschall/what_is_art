@@ -1,7 +1,7 @@
 class ArtworkRequestService
-  def initialize(user, id)
+  def initialize(user, artwork_id)
     @user = user
-    @art_id = id
+    @artwork_id = artwork_id
   end
 
   def raw_artwork
@@ -9,7 +9,7 @@ class ArtworkRequestService
   end
 
   private
-  attr_reader :art_id, :user
+  attr_reader :artwork_id, :user
 
   def connection
     Faraday.new('https://api.artsy.net')
@@ -17,7 +17,7 @@ class ArtworkRequestService
 
   def api_request
     response = connection.get do |req|
-      req.url "/api/artworks/#{art_id}"
+      req.url "/api/artworks/#{artwork_id}"
       req.headers['Content-Type'] = 'application/json'
       req.headers['X-XAPP-Token'] = user.x_app_token
     end

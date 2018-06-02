@@ -1,24 +1,38 @@
 class ArtistSearch
-  def initialize(artwork_id, user)
-    @artwork_id = artwork_id
+  def initialize(searchable_id, user)
+    @searchable_id = searchable_id
     @user = user
   end
 
   def artist
-    parsed_request.map do |information|
+    artist_parsed_request.map do |information|
+      Artist.new(information)
+    end
+  end
+
+  def contemporary_artists
+    contemporary_artist_parsed_request.map do |information|
       Artist.new(information)
     end
   end
 
   private
-  attr_reader :artwork_id, :user
+  attr_reader :searchable_id, :user
 
-  def request
-    ArtistRequestService.new(artwork_id, user).raw_artist
+  def artist_request
+    ArtistRequestService.new(searchable_id, user).raw_artist
   end
 
-  def parsed_request
-    request[:_embedded][:artists]
+  def artist_parsed_request
+    artist_request[:_embedded][:artists]
+  end
+
+  def contemporary_artists_request
+    ArtistRequestService.new(searchable_id, user).raw_contemporary_artists
+  end
+
+  def contemporary_artist_parsed_request
+    contemporary_artists_request[:_embedded][:artists]
   end
 
 end

@@ -9,7 +9,6 @@ describe 'as a user' do
       visit gallery_path
 
       visit '/artist/4d8b92eb4eb68a1b2c000968'
-      click_on "Go to Artists Page"
       click_on "Similar Contemporary Artists"
 
       expect(page).to have_content("Name")
