@@ -18,9 +18,15 @@ $calendar-background: #eaea54;
   border: 5px solid black;
   @include profile-box-settings;
   font-size: 20px;
-  margin-bottom: 220px;
   padding: 20px;
   text-align: center;
+}
+
+.artwork-information-headers {
+  display: block;
+  font-family: $playfair-display;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .artwork-background {
@@ -69,9 +75,6 @@ $calendar-background: #eaea54;
 }
 
 //GALLERY PAGE
-.card {
-
-}
 .card-columns {
   display: inline-block;
 }
@@ -88,6 +91,16 @@ $calendar-background: #eaea54;
   width: 400px;
 }
 
+//GENE PAGE
+.gene-information {
+  border: 5px solid black;
+  @include profile-box-settings;
+  font-size: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
 //HEADER PARTIAL
 .header {
   align-items: center;
@@ -100,7 +113,12 @@ $calendar-background: #eaea54;
 }
 
 .header-logo {
-  height: 100px;
+  height: 80px;
+}
+
+.header-logo-link {
+  left: 20px;
+  position: absolute;
 }
 
 .header-text {

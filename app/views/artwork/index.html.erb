@@ -1,4 +1,5 @@
 <html class="artwork-background">
+<body style="margin-bottom: 200px;">
   <%= render "partials/header" %>
   <% @similar_artworks.each do |artwork| %>
     <% present(artwork) do |artwork|%>
@@ -6,18 +7,19 @@
         <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link' %><br>
       </div>
       <div class="artwork-information">
-        Title: <%= artwork.title %><br>
-        Category: <%= artwork.category %><br>
-        Medium: <%= artwork.medium %><br>
-        Date: <%= artwork.date %><br>
-        Series: <%= artwork.series %><br>
-        Literature: <%= artwork.literature %><br>
-        Collecting Institution:<%= artwork.collecting_institution %><br>
-        Artist: <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
-        Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
-        Gene: <%= link_to "Learn More About The Genes/Categories!", genes_path(artwork.id) %><br>
+        <div class="artwork-information-headers">Title:</div> <%= artwork.title %><br>
+        <div class="artwork-information-headers">Category:</div> <%= artwork.category %><br>
+        <div class="artwork-information-headers">Medium:</div> <%= artwork.medium %><br>
+        <div class="artwork-information-headers">Date:</div> <%= artwork.date %><br>
+        <div class="artwork-information-headers">Series:</div> <%= artwork.series %><br>
+        <div class="artwork-information-headers">Literature:</div> <%= artwork.literature %><br>
+        <div class="artwork-information-headers">Collecting Institution:</div> <%= artwork.collecting_institution %><br>
+        <div class="artwork-information-headers">Artist:</div> <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
+        <div class="artwork-information-headers">Similar Artworks:</div> <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
+        <div class="artwork-information-headers">Gene:</div> <%= link_to "Learn More About The Genes/Categories!", genes_path(artwork.id) %><br>
       </div>
     <% end %>
   <% end %>
   <%= render "partials/footer" %>
+</body>
 <html>

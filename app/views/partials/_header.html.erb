@@ -1,4 +1,4 @@
 <div class="header">
-  <%= image_tag image_url('websitelogo.png'), class: 'header-logo' %>
+  <%= link_to (image_tag image_url('white_logo.png'), class: 'header-logo'), user_path(current_user), class: 'header-logo-link' %>
   <p class="header-text">What is art?</p>
 </div>

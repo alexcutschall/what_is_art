@@ -1,15 +1,16 @@
 <html class="artwork-background">
-<%= render "partials/header" %>
-  <div class="artwork-information">
-    <% @genes.each do |gene| %>
-      <% present(gene) do |gene| %>
-        Display Name: <%= gene.name %>
-        Description: <%= gene.description %>
-        Artworks: <%= gene.artworks %>
-        Artists: <%= gene.artists %>
+  <body style="margin-bottom: 220px;">
+    <%= render "partials/header" %>
+      <% @genes.each do |gene| %>
+        <% present(gene) do |gene| %>
+          <div class="gene-information">
+            <strong>Name:</strong> <%= gene.name %>
+            <strong>Description:</strong> <%= gene.description %>
+            <strong>Artworks:</strong> <%= gene.artworks %>
+            <strong>Artists:</strong> <%= gene.artists %>
+          </div>
+        <% end %>
       <% end %>
-    <% end %>
-  </div>
-
-  <%= render "partials/footer" %>
+    <%= render "partials/footer" %>
+  </body>
 </html>

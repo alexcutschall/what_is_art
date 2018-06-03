@@ -1,4 +1,5 @@
 <html class="artwork-background">
+  <body style="margin-bottom: 220px;">
   <%= render "partials/header" %>
   <% @artists.each do |artist| %>
     <% present(artist) do |artist| %>
@@ -6,17 +7,18 @@
       <%= image_tag artist.image, class: 'artwork-picture' %>
       </div>
       <div class="artwork-information">
-        Name: <%= artist.name %><br>
-        Birthday: <%= artist.birthday %><br>
-        Deathday: <%= artist.deathday %><br>
-        Hometown: <%= artist.hometown %><br>
-        Location: <%= artist.location %><br>
-        Nationality: <%= artist.nationality %><br>
-        Similar Artists: <%= link_to "Similar Artists", artists_path(artist.id, type: "similar") %><br>
-        Similar Contemporary Artists: <%= link_to "Similar Contemporary Artists", artists_path(artist.id, type: "contemporary") %><br>
-        Genes: <%= link_to "Learn More About This Artist's Style!", genes_path(artist.id, type: "artist") %><br>
+        <div class="artwork-information-headers">Name:</div> <%= artist.name %><br>
+        <div class="artwork-information-headers">Birthday:</div> <%= artist.birthday %><br>
+        <div class="artwork-information-headers">Deathday:</div> <%= artist.deathday %><br>
+        <div class="artwork-information-headers">Hometown:</div> <%= artist.hometown %><br>
+        <div class="artwork-information-headers">Location:</div> <%= artist.location %><br>
+        <div class="artwork-information-headers">Nationality:</div> <%= artist.nationality %><br>
+        <div class="artwork-information-headers">Similar Artists:</div> <%= link_to "Similar Artists", artists_path(artist.id, type: "similar") %><br>
+        <div class="artwork-information-headers">Similar Contemporary Artists:</div> <%= link_to "Similar Contemporary Artists", artists_path(artist.id, type: "contemporary") %><br>
+        <div class="artwork-information-headers">Genes:</div> <%= link_to "Learn More About This Artist's Style!", genes_path(artist.id, type: "artist") %><br>
       </div>
     <% end %>
   <% end %>
   <%= render "partials/footer" %>
+</body>
 <html>
