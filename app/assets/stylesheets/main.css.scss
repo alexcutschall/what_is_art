@@ -18,9 +18,9 @@ $calendar-background: #eaea54;
   border: 5px solid black;
   @include profile-box-settings;
   font-size: 20px;
+  margin-bottom: 220px;
   padding: 20px;
   text-align: center;
-
 }
 
 .artwork-background {
@@ -39,13 +39,27 @@ $calendar-background: #eaea54;
   height: 500px;
 }
 
+.artwork-heart {
+  height: 100px;
+  position: absolute;
+  top: 120px;
+  right: 20px;
+}
+
+.filled-heart {
+  background-color: red;
+}
+
 //FOOTER
 .footer {
+  background-color: grey;
   bottom: 0;
   display: flex;
   left: 0;
   height: 220px;
   position: fixed;
+  width: 100%;
+  margin-top: 100px;
 }
 
 .footer-images {

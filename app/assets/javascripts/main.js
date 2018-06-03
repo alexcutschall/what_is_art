@@ -1,7 +1,9 @@
-$( document ).ready(function() {
-  $('.grid').masonry({
-    itemSelector: '.grid-item',
-    columnWidth: 50,
-    gutter: 10
+$( document ).ready(() => {
+
+  $('.artwork-button').on('click',
+    function (event) {
+      $('.artwork-heart').toggleClass('filled-heart');
+      const artworkId = $( "div.artwork-id" ).text();
   });
+
 });

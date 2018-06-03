@@ -2,6 +2,7 @@
   <html class="artwork-background">
   <%= render "partials/header" %>
     <div class="artwork-box">
+      <button class='artwork-button'><%= image_tag image_url('white-heart.png'), class: 'artwork-heart' %></button>
       <%= image_tag artwork.image, class: 'artwork-picture' %>
     </div>
     <div class="artwork-information">
@@ -11,6 +12,7 @@
       Date: <%= artwork.date %><br>
       Series: <%= artwork.series %><br>
       Literature: <%= artwork.literature %><br>
+      ID: <div class= 'artwork-id'><%= artwork.id %></div>
       Collecting Institution:<%= artwork.collecting_institution %><br>
       Artist: <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
       Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
