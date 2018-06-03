@@ -12,6 +12,7 @@
       Date: <%= artwork.date %><br>
       Series: <%= artwork.series %><br>
       Literature: <%= artwork.literature %><br>
+      ID: <div class= 'artwork-id'><%= artwork.id %></div>
       Collecting Institution:<%= artwork.collecting_institution %><br>
       Artist: <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
       Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
