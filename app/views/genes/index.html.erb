@@ -4,10 +4,10 @@
       <% @genes.each do |gene| %>
         <% present(gene) do |gene| %>
           <div class="gene-information">
-            <strong>Name:</strong> <%= gene.name %>
-            <strong>Description:</strong> <%= gene.description %>
-            <strong>Artworks:</strong> <%= gene.artworks %>
-            <strong>Artists:</strong> <%= gene.artists %>
+            <div class="artwork-information-headers">Name: </div><%= gene.name %>
+            <div class="artwork-information-headers">Description: </div><%= gene.description %>
+            <div class="artwork-information-headers">Artworks: </div><%= gene.artworks %>
+            <div class="artwork-information-headers">Artists: </div></strong><%= gene.artists %>
           </div>
         <% end %>
       <% end %>
