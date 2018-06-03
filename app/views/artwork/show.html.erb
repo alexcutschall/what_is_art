@@ -7,13 +7,13 @@
         <%= image_tag artwork.image, class: 'artwork-picture' %>
       </div>
       <div class="artwork-information">
-        <div class="artwork-information-headers">Title:</div> <%= artwork.title %><br>
-        <div class="artwork-information-headers">Category:</div> <%= artwork.category %><br>
-        <div class="artwork-information-headers">Medium:</div> <%= artwork.medium %><br>
+        <div class="artwork-information-headers artwork-title">Title:</div> <%= artwork.title %><br>
+        <div class="artwork-information-headers artwork-category">Category:</div> <%= artwork.category %><br>
+        <div class="artwork-information-headers artwork-medium">Medium:</div> <%= artwork.medium %><br>
         <div class="artwork-information-headers">Date:</div> <%= artwork.date %><br>
         <div class="artwork-information-headers">Series:</div> <%= artwork.series %><br>
         <div class="artwork-information-headers">Literature:</div> <%= artwork.literature %><br>
-        <div class="artwork-information-headers">ID:</div> <div class= 'artwork-id'><%= artwork.id %></div>
+        <div class="artwork-information-headers artwork-id">ID:</div><%= artwork.id %>
         <div class="artwork-information-headers">Collecting Institution:</div> <%= artwork.collecting_institution %><br>
         <div class="artwork-information-headers">Artist:</div> <%= link_to "Go to Artists Page", artist_path(artwork.id) %><br>
         <div class="artwork-information-headers">Similar Artworks:</div> <%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %><br>
