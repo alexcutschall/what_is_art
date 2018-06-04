@@ -296,6 +296,19 @@ $calendar-background: #eaea54;
   @include profile-box-settings;
 }
 
+.im-feeling-lucky-btn {
+  -webkit-border-radius: 27;
+  -moz-border-radius: 27;
+  border-radius: 27px;
+  font-family: $fauno;
+  color: black;
+  font-size: 25px;
+  background: white;
+  padding: 11px 20px 10px 20px;
+  border: solid black 3px;
+  text-decoration: none;
+}
+
 .landscape-picture {
   align-items: stretch;
   border-top: 1px solid black;

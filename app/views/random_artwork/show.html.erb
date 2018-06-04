@@ -7,17 +7,17 @@
         <%= image_tag random_artwork.image, class: 'artwork-picture' %>
       </div>
       <div class="artwork-information">
-        <div class="artwork-information-headers">Title:</div> <%= random_artwork.title %><br>
-        <strong>Category:</strong> <%= random_artwork.category %><br>
-        <strong>Medium: </strong><%= random_artwork.medium %><br>
-        <strong>Date: </strong><%= random_artwork.date %><br>
-        Series: <%= random_artwork.series %><br>
-        Literature: <%= random_artwork.literature %><br>
-        Collecting Institution:<%= random_artwork.collecting_institution %><br>
-        Artist: <%= link_to "Go to Artists Page", artist_path(random_artwork.id) %><br>
-        Similar Artworks: <%= link_to "Check Out Similar Art!", artworks_path(random_artwork.id) %><br>
-        Gene: <%= link_to "Learn More About The Genes/Categories!", genes_path(random_artwork.id) %><br>
-        <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get') %>
+        <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get', class: "im-feeling-lucky-btn") %><br>
+        <div class="artwork-information-headers">Title:</div><%= random_artwork.title %><br>
+        <div class="artwork-information-headers">Category:</div><%= random_artwork.category %><br>
+        <div class="artwork-information-headers">Medium:</div><%= random_artwork.medium %><br>
+        <div class="artwork-information-headers">Date:</div><%= random_artwork.date %><br>
+        <div class="artwork-information-headers">Series:</div> <%= random_artwork.series %><br>
+        <div class="artwork-information-headers">Literature:</div><%= random_artwork.literature %><br>
+        <div class="artwork-information-headers">Collecting Institution:</div><%= random_artwork.collecting_institution %><br>
+        <div class="artwork-information-headers">Artist:</div><%= link_to "Go to Artists Page", artist_path(random_artwork.id) %><br>
+        <div class="artwork-information-headers">Similar Artworks:</div><%= link_to "Check Out Similar Art!", artworks_path(random_artwork.id) %><br>
+        <div class="artwork-information-headers">Gene:</div><%= link_to "Learn More About The Genes/Categories!", genes_path(random_artwork.id) %><br>
       </div>
     <% end %>
     <%= render "partials/footer" %>
