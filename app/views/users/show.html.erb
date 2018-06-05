@@ -4,7 +4,7 @@
   </div>
   <%= image_tag (user.profile_pic), class: 'user-profile-pic' %>
   <div class="simple-box">
-    <p class="simple-text">Favorites: 0</p>
+    <p class="simple-text">Favorites: <%= user.favorites.count %></p>
   </div>
 
   <div class="profile-container">
