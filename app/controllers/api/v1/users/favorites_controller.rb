@@ -5,5 +5,6 @@ class Api::V1::Users::FavoritesController < ApplicationController
 
   def create
     JSON.parse(request.body.string)
+    binding.pry
   end
 end

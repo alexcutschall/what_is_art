@@ -11,7 +11,7 @@ $( document ).ready(() => {
       const artworkSeries = $( "span.artwork-series" ).text();
       const artworkLiterature = $( "span.artwork-literature" ).text();
       const artworkCollectingInstitution = $( "span.artwork-collecting-institution" ).text();
-      debugger;
+      const user_id = $( "div#current_id").text();
       // const artworkArtist = $( "span.artwork-artist" ).text();
       // const artworkSimilarArtwork = $( "span.artwork-similar-artwork" ).text();
       // const artworkGenes = $( "span.artwork-genes" ).text();
