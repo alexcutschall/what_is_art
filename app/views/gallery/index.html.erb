@@ -1,6 +1,7 @@
 <body style="margin-bottom: 200px;">
   <h1>Gallery</h1>
   Search
+  <%= link_to "Next Page", next_gallery_path(@next_page) %>
   <% @search_artworks.each do |artwork| %>
     <% present(artwork) do |artwork| %>
       <div class="artwork">
