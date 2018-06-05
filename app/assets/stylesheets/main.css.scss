@@ -351,8 +351,12 @@ $calendar-background: #eaea54;
 
 .quiz-box {
   border: 5px solid black;
+  font-size: 30px;
   height: 25%;
   @include profile-box-settings;
+    a {
+      color: black;
+    }
 }
 
 .quote-box {
