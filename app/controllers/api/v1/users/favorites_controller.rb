@@ -1,17 +1,9 @@
 require 'stringio'
 
-module Api
-  module V1
-    module Users
-      class FavoritesController < ApiController
-        skip_before_action :verify_authenticity_token
+class Api::V1::Users::FavoritesController < ApplicationController
+  skip_before_action :verify_authenticity_token
 
-        def create
-          JSON.parse(request.body.string)
-          binding.pry
-        end
-
-      end
-    end
+  def create
+    JSON.parse(request.body.string)
   end
 end
