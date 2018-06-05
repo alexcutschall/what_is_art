@@ -4,7 +4,7 @@
   <% present(@artwork) do |random_artwork| %>
       <div class="artwork-box">
         <button class='artwork-button'><%= image_tag image_url('white-heart.png'), class: 'artwork-heart' %></button>
-        <%= image_tag random_artwork.image, class: 'artwork-picture' %>
+        <%= image_tag random_artwork.large_image, class: 'artwork-picture' %>
       </div>
       <div class="artwork-information">
         <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get', class: "im-feeling-lucky-btn") %><br>
