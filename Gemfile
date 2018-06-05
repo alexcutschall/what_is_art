@@ -24,6 +24,7 @@ group :development, :test do
   gem 'factory_bot'
   gem 'pry'
   gem 'launchy'
+  gem 'simplecov'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 

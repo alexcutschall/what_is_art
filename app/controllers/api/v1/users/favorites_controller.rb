@@ -20,7 +20,5 @@ class Api::V1::Users::FavoritesController < ApplicationController
     artwork_date: artwork_date, artwork_series: artwork_series,
     artwork_literature: artwork_literature,
     artwork_collecting_institution: artwork_collecting_institution)
-    
-    binding.pry
   end
 end
