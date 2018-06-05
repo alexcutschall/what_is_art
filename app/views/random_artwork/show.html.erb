@@ -1,3 +1,4 @@
+<div id="current_id" style="display: none;"><%= current_user.id %></div>
 <html class="artwork-background">
   <body style="margin-bottom: 200px;">
   <%= render "partials/header" %>
@@ -8,17 +9,17 @@
       </div>
       <div class="artwork-information">
         <%= button_to("I'm Feeling Artsy", sample_artwork_path, method: 'get', class: "im-feeling-lucky-btn") %><br>
-        <div class="artwork-information-headers">Title:</div><span class="artwork-title"><%= artwork.title %></span>
-        <div class="artwork-information-headers">Category:</div><span class="artwork-category"><%= artwork.category %></span>
-        <div class="artwork-information-headers artwork-medium">Medium:</div><span class="artwork-medium"><%= artwork.medium %></span>
-        <div class="artwork-information-headers">Date:</div><span class="artwork-date"><%= artwork.date %></span>
-        <div class="artwork-information-headers">Series:</div><span class="artwork-series"><%= artwork.series %></span>
-        <div class="artwork-information-headers">Literature:</div><span class="artwork-literature"><%= artwork.literature %></span>
-        <div class="artwork-information-headers artwork-id">ID:</div><span class="artwork-id"><%= artwork.id %></span>
-        <div class="artwork-information-headers">Collecting Institution:</div><span class="artwork-collecting-institution"><%= artwork.collecting_institution %></span>
-        <div class="artwork-information-headers">Artist:</div><span class="artwork-artist"><%= link_to "Go to Artists Page", artist_path(artwork.id) %></span>
-        <div class="artwork-information-headers">Similar Artworks:</div><span class="artwork-similar-artwork"><%= link_to "Check Out Similar Art!", artworks_path(artwork.id) %></span>
-        <div class="artwork-information-headers">Gene:</div><span class="artwork-genes"><%= link_to "Learn More About The Genes/Categories!", genes_path(artwork.id) %></span>
+        <div class="artwork-information-headers">Title:</div><span class="artwork-title"><%= random_artwork.title %></span>
+        <div class="artwork-information-headers">Category:</div><span class="artwork-category"><%= random_artwork.category %></span>
+        <div class="artwork-information-headers artwork-medium">Medium:</div><span class="artwork-medium"><%= random_artwork.medium %></span>
+        <div class="artwork-information-headers">Date:</div><span class="artwork-date"><%= random_artwork.date %></span>
+        <div class="artwork-information-headers">Series:</div><span class="artwork-series"><%= random_artwork.series %></span>
+        <div class="artwork-information-headers">Literature:</div><span class="artwork-literature"><%= random_artwork.literature %></span>
+        <div class="artwork-information-headers artwork-id">ID:</div><span class="artwork-id"><%= random_artwork.id %></span>
+        <div class="artwork-information-headers">Collecting Institution:</div><span class="artwork-collecting-institution"><%= random_artwork.collecting_institution %></span>
+        <div class="artwork-information-headers">Artist:</div><span class="artwork-artist"><%= link_to "Go to Artists Page", artist_path(random_artwork.id) %></span>
+        <div class="artwork-information-headers">Similar Artworks:</div><span class="artwork-similar-artwork"><%= link_to "Check Out Similar Art!", artworks_path(random_artwork.id) %></span>
+        <div class="artwork-information-headers">Gene:</div><span class="artwork-genes"><%= link_to "Learn More About The Genes/Categories!", genes_path(random_artwork.id) %></span>
       </div>
     <% end %>
     <%= render "partials/footer" %>
