@@ -28,7 +28,7 @@
     <div class="profile-column">
       <div class="favorites-box">
         <h2>Favorites</h2>
-        <%= image_tag image_url('favorite.png'), class: 'profile-favorite' %>
+        <%= link_to image_tag(image_url('favorite.png'), class: 'profile-favorite'), user_favorite_path(user.id) %>
       </div>
 
       <div class="gallery-box">

@@ -11,8 +11,8 @@ $( document ).ready(() => {
       const artworkSeries = $( "span.artwork-series" ).text();
       const artworkLiterature = $( "span.artwork-literature" ).text();
       const artworkCollectingInstitution = $( "span.artwork-collecting-institution" ).text();
-      debugger;
-      // const artworkArtist = $( "span.artwork-artist" ).text();
+      const user_id = $( "div#current_id").text();
+      // const artworkArtist = $( "span.artwork-artist" ).location.href;
       // const artworkSimilarArtwork = $( "span.artwork-similar-artwork" ).text();
       // const artworkGenes = $( "span.artwork-genes" ).text();
 
@@ -25,6 +25,7 @@ $( document ).ready(() => {
         artworkSeries,
         artworkLiterature,
         artworkCollectingInstitution,
+        user_id
       };
 
       const postPayload = (body) => {

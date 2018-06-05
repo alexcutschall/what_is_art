@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/artist/:id', to: 'artists#show', as: 'artist'
   get '/artists/:id', to: 'artists#index', as: 'artists'
   get '/genes/:id', to: 'genes#index', as: 'genes'
+  get '/:id/favorites', to: 'favorites#index', as: 'user_favorite'
 
   resources :users
 

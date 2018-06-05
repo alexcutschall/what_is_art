@@ -1,0 +1,16 @@
+<body style="margin-bottom: 200px;">
+<%= render "partials/header" %>
+Favorites
+<% @favorites.each do |favorite| %>
+  <div class="favorite">
+    <%= favorite.artwork_title %>
+    <%= favorite.artwork_category %>
+    <%= favorite.artwork_medium %>
+    <%= favorite.artwork_date %>
+    <%= favorite.artwork_series %>
+    <%= favorite.artwork_literature %>
+    <%= favorite.artwork_collecting_institution %>
+  <% end %>
+</div>
+<%= render "partials/footer" %>
+</body>
