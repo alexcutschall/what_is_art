@@ -13,8 +13,6 @@ describe 'as a user' do
         click_on "Learn More About The Genes/Categories!"
         expect(page).to have_content("Name")
         expect(page).to have_content("Description")
-        expect(page).to have_content("Artworks")
-        expect(page).to have_content("Artists")
       end
     end
   end

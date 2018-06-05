@@ -1,9 +1,10 @@
-class GallerySearch
-  def initialize(current_user)
-    @user = current_user
+class NextGallerySearch
+  def initialize(user, id)
+    @user = user
+    @id = id
   end
 
-  def artworks
+  def next_artworks
     request[:_embedded][:artworks].map do |information|
       Artwork.new(information)
     end
@@ -14,10 +15,9 @@ class GallerySearch
   end
 
   private
-  attr_reader :user
+  attr_reader :user, :id
 
   def request
-    GalleryRequestService.new(user).raw_artworks
+    NextGallerySearchService.new(user, id).raw_next_artworks
   end
-
 end

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new', as: 'login'
   post '/login', to: 'sessions#create'
   get '/gallery', to: 'gallery#index', as: 'gallery'
+  get '/gallery/:id', to: 'gallery#show', as: 'next_gallery'
   get "/artwork/:id", to: 'artwork#show', as: 'artwork'
   get '/artworks/:id', to: 'artwork#index', as: 'artworks'
   get '/random-artwork', to: 'random_artwork#show', as: 'sample_artwork'
