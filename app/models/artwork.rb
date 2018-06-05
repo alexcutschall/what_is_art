@@ -15,10 +15,15 @@ class Artwork
     @similar_artworks = information[:_links][:similar_artworks][:href] if information[:_links][:similar_artworks]
     @gene = information[:_links][:genes][:href] if information[:_links][:genes]
     @image = information[:_links][:thumbnail][:href] if information[:_links][:thumbnail]
+    @large_image_link = information[:_links][:image][:href] if information[:_links][:image]
+    @image_sizes = information[:image_versions] if information[:image_versions]
   end
 
-  def artist
-    @artist.split('.net')[1]
+  def large_image
+    if image_sizes.include?("large")
+      @large_image_link.sub("{image_version}", "large")
+    else
+      @large_image_link.sub("{image_version}", "#{@image_sizes.first}")
+    end
   end
-
 end
