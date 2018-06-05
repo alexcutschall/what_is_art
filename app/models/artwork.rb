@@ -1,7 +1,8 @@
 class Artwork
   attr_reader :id, :title, :category, :medium,
               :date, :series, :literature, :collecting_institution,
-              :similar_artworks, :gene, :image
+              :similar_artworks, :gene, :image, :large_image_link,
+              :image_sizes
   def initialize(information)
     @id = information[:id]
     @title = information[:title]

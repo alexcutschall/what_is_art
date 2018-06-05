@@ -21,7 +21,7 @@ class Artist
   end
 
   def large_image
-    if image_sizes.include?("large")
+    if @image_sizes.include?("large")
       @large_image_link.sub("{image_version}", "large")
     else
       @large_image_link.sub("{image_version}", "#{@image_sizes.first}")
