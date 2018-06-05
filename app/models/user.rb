@@ -7,6 +7,8 @@ class User < ApplicationRecord
   has_attached_file :profile_pic
   do_not_validate_attachment_file_type :profile_pic
   has_secure_password
+  has_many :user_favorites
+  has_many :favorites, through: :user_favorites
 
   def x_app_token_request
     api_url = URI.parse('https://api.artsy.net/api/tokens/xapp_token')

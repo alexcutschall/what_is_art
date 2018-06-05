@@ -11,6 +11,8 @@ $( document ).ready(() => {
       const artworkSeries = $( "span.artwork-series" ).text();
       const artworkLiterature = $( "span.artwork-literature" ).text();
       const artworkCollectingInstitution = $( "span.artwork-collecting-institution" ).text();
+      // const current_user_id = $('#current_user').data('current_user');
+      debugger;
       // const artworkArtist = $( "span.artwork-artist" ).text();
       // const artworkSimilarArtwork = $( "span.artwork-similar-artwork" ).text();
       // const artworkGenes = $( "span.artwork-genes" ).text();
@@ -35,5 +37,20 @@ $( document ).ready(() => {
           body: JSON.stringify(body)
         };
       };
+
+      const postArtwork = () => {
+        fetch('/api/v1/users/favorites', postPayload(body))
+          .then((response) => {
+            if (response.status === 201) {
+              return response.json();
+              debugger;
+            }
+          })
+          .catch((error) => {
+            throw error;
+          });
+        };
+
+    postArtwork();
   });
 });

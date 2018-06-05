@@ -12,4 +12,13 @@ Rails.application.routes.draw do
   get '/genes/:id', to: 'genes#index', as: 'genes'
 
   resources :users
+
+  namespace :api do
+    namespace :v1 do
+      namespace :users do
+        resources :favorites
+      end
+    end
+  end
+
 end
