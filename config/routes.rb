@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/artists/:id', to: 'artists#index', as: 'artists'
   get '/genes/:id', to: 'genes#index', as: 'genes'
   get '/:id/favorites', to: 'favorites#index', as: 'user_favorite'
+  get '/quiz_of_the_day', to: 'quiz#show', as: 'quiz_of_the_day'
 
   resources :users
 
