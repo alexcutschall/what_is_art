@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_141658) do
+ActiveRecord::Schema.define(version: 2018_06_05_223131) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,17 @@ ActiveRecord::Schema.define(version: 2018_06_05_141658) do
     t.string "artwork_series"
     t.string "artwork_literature"
     t.string "artwork_collecting_institution"
+  end
+
+  create_table "quiz_artists", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "quiz_artworks", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.bigint "quiz_artist_id"
+    t.index ["quiz_artist_id"], name: "index_quiz_artworks_on_quiz_artist_id"
   end
 
   create_table "user_favorites", force: :cascade do |t|
@@ -45,4 +56,5 @@ ActiveRecord::Schema.define(version: 2018_06_05_141658) do
     t.string "x_app_token"
   end
 
+  add_foreign_key "quiz_artworks", "quiz_artists"
 end

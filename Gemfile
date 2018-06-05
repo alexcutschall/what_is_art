@@ -16,6 +16,7 @@ gem 'bcrypt'
 gem 'paperclip'
 gem 'faraday'
 gem 'jquery-rails'
+gem 'faraday_middleware'
 
 group :development, :test do
   gem 'rspec-rails'
