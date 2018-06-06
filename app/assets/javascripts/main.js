@@ -49,7 +49,19 @@ $( document ).ready(() => {
             throw error;
           });
         };
-
     postArtwork();
   });
+
+  $('.answer').on('click',
+  function (event) {
+    const playAnswer = $(this).text();
+    const artworkArtist = $( "#artist-name").text();
+    if (playAnswer == artworkArtist) {
+      $('.message').text('You got it, right!');
+    }
+    else {
+      $('.message').text("Sorry, that's not correct...");
+    };
+  });
+
 });

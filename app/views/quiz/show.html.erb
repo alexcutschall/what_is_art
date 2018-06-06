@@ -5,12 +5,14 @@
         Quiz of the Day
       </div>
       <div class="artwork-box">
+        <div id="artist-name" style="display: none;"><%= @artwork.quiz_artist.name %></div>
         <%= image_tag image_url(@artwork.image) %>
       </div>
       <div class="quiz-choice-container">
-        <div class="answer quiz-correct"><%= @artist.name %></div>
-        <div class="answer quiz-incorrect"><%= @random_artist.name %></div>
+        <div class="quiz-correct"><button class="answer"><%= @artist.name %></button></div>
+        <div class="quiz-incorrect"><button class="answer"><%= @random_artist.name %></button></div>
       </div>
+      <p class="message"></p>
     </body>
   <%= render "partials/footer" %>
 <html>
