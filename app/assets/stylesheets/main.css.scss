@@ -75,17 +75,27 @@ $calendar-background: #eaea54;
 }
 
 //GALLERY PAGE
-.card-columns {
-  display: inline-block;
+.gallery-artwork {
+  margin: 10px;
 }
-.grid-item {
-  float: left;
-  width: 80px;
-  height: 60px;
-  border: 2px solid hsla(0, 0%, 0%, 0.5);
+
+.gallery-artwork-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
-.grid-item--width2 {
-  width: 400px;
+
+.gallery-background {
+  
+}
+
+.gallery-header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: $playfair-display;
+  font-size: 50px;
+  justify-content: center;
 }
 
 //GENE PAGE
@@ -106,7 +116,6 @@ $calendar-background: #eaea54;
   height: 100px;
   justify-content: center;
   color: white;
-  padding-right: 80px;
 }
 
 .header-logo {
