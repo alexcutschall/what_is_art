@@ -13,6 +13,17 @@ $calendar-background: #eaea54;
   font-family: $fauno;
 }
 
+@mixin quiz-button {
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  font-family: $fauno;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 200px;
+}
+
 //ARTWORK SHOW PAGE
 .artwork-information {
   border: 5px solid black;
@@ -306,6 +317,25 @@ $calendar-background: #eaea54;
    background: #1b435e;
    }
 
+
+//QUIZ PAGE
+
+.quiz-correct {
+  @include quiz-button;
+}
+
+.quiz-incorrect {
+  @include quiz-button;
+}
+
+.quiz-choice-container {
+  border: 5px solid black;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+  padding: 20px;
+  text-align: center;
+}
 
 //USER PROFILE PAGE
 .calendar {
