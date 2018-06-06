@@ -2,12 +2,12 @@ class GenePresenter < BasePresenter
   def id
     @model.id
   end
-  
+
   def name
     if @model.name != ""
       @model.name
     else
-      "Name Unknown"
+      "Unknown"
     end
   end
 
@@ -15,7 +15,7 @@ class GenePresenter < BasePresenter
     if @model.description != ""
       @model.description
     else
-      "Description Unknown"
+      "Unknown"
     end
   end
 
@@ -23,14 +23,14 @@ class GenePresenter < BasePresenter
     if @model.artworks != ""
       @model.artworks
     else
-      "Artworks Unknown"
+      "Unknown"
     end
 
     def artists
       if @model.artists != ""
         @model.artists
       else
-        "Artists Unknown"
+        "Unknown"
       end
     end
   end

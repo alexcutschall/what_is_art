@@ -16,7 +16,7 @@ class ArtworkPresenter < BasePresenter
     if @model.title != ""
       @model.title
     else
-      "Title Unavailable"
+      "Unknown"
     end
   end
 
@@ -24,7 +24,7 @@ class ArtworkPresenter < BasePresenter
     if @model.category != ""
       @model.category
     else
-      "Category Unknown"
+      "Unknown"
     end
   end
 
@@ -64,7 +64,7 @@ class ArtworkPresenter < BasePresenter
     if @model.collecting_institution != ""
       @model.collecting_institution
     else
-      "Collecting Institution Unknown"
+      "Unknown"
     end
   end
 
@@ -72,7 +72,7 @@ class ArtworkPresenter < BasePresenter
     if @model.artist != ""
       @model.artist
     else
-      "Artist Unknown"
+      "Unknown"
     end
   end
 
@@ -80,7 +80,7 @@ class ArtworkPresenter < BasePresenter
     if @model.similar_artworks != ""
       @model.similar_artworks
     else
-      "Similar Artworks Unknown"
+      "Unknown"
     end
   end
 
@@ -88,7 +88,7 @@ class ArtworkPresenter < BasePresenter
     if @model.gene != ""
       @model.gene
     else
-      "Similar Genes Unknown"
+      "Unknown"
     end
   end
 

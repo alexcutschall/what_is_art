@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_223131) do
+ActiveRecord::Schema.define(version: 2018_06_06_151155) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2018_06_05_223131) do
     t.string "artwork_series"
     t.string "artwork_literature"
     t.string "artwork_collecting_institution"
+    t.string "image"
   end
 
   create_table "quiz_artists", force: :cascade do |t|

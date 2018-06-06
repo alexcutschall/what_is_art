@@ -2,7 +2,7 @@ class ArtistPresenter < BasePresenter
   def id
     @model.id
   end
-  
+
   def image
     if @model.image != ""
       @model.image
@@ -15,7 +15,7 @@ class ArtistPresenter < BasePresenter
     if @model.name != ""
       @model.name
     else
-      "Name Unavailable"
+      "Unknown"
     end
   end
 
@@ -23,7 +23,7 @@ class ArtistPresenter < BasePresenter
     if @model.birthday != ""
       @model.birthday
     else
-      "Birthday Unknown"
+      "Unknown"
     end
   end
 
@@ -31,7 +31,7 @@ class ArtistPresenter < BasePresenter
     if @model.deathday != ""
       @model.deathday
     else
-      "Deathday Unknown"
+      "Unknown"
     end
   end
 
@@ -39,7 +39,15 @@ class ArtistPresenter < BasePresenter
     if @model.hometown != ""
       @model.hometown
     else
-      "Hometown Unknown"
+      "Unknown"
+    end
+  end
+
+  def location
+    if @model.location != ""
+      @model.location
+    else
+      "Unknown"
     end
   end
 
@@ -47,7 +55,7 @@ class ArtistPresenter < BasePresenter
     if @model.nationality != ""
       @model.nationality
     else
-      "Nationality Unknown"
+      "Unknown"
     end
   end
 
@@ -55,7 +63,7 @@ class ArtistPresenter < BasePresenter
     if @model.similar_artists != ""
       @model.similar_artists
     else
-      "Similar Artists Unknown"
+      "Unknown"
     end
   end
 
@@ -63,7 +71,7 @@ class ArtistPresenter < BasePresenter
     if @model.similar_contemporary_artists != ""
       @model.similar_contemporary_artists
     else
-      "Similar Artists Unknown"
+      "Unknown"
     end
   end
 
@@ -71,7 +79,7 @@ class ArtistPresenter < BasePresenter
     if @model.genes != ""
       @model.genes
     else
-      "Similar Genes Unknown"
+      "Unknown"
     end
   end
 
