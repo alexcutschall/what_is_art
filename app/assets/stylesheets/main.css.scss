@@ -75,17 +75,56 @@ $calendar-background: #eaea54;
 }
 
 //GALLERY PAGE
-.card-columns {
-  display: inline-block;
+.gallery-artwork {
+  margin: 10px;
 }
-.grid-item {
-  float: left;
-  width: 80px;
-  height: 60px;
-  border: 2px solid hsla(0, 0%, 0%, 0.5);
+
+.gallery-artwork-container {
+  background-image: image-url('grey-texture.jpg');
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
-.grid-item--width2 {
-  width: 400px;
+
+.gallery-background {
+  background-image: image-url('wood.jpg');
+}
+
+.gallery-container-background {
+  background-image: image-url('grey-texture.jpg')
+}
+
+.gallery-header {
+  align-items: center;
+  background-image: image-url('wood.jpg');
+  display: flex;
+  flex-direction: column;
+  font-family: $playfair-display;
+  font-size: 60px;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.gallery-side-button {
+    border: 1px solid black;
+    border-radius: 100px;
+    font-family: $playfair-display;
+    font-size: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 245px;
+    padding-left: 75px;
+    opacity: 0.6;
+
+    position: fixed;
+    bottom: 270px;
+    right: -200px;
+      a {
+        color: black;
+        font-style: bold;
+      }
 }
 
 //GENE PAGE
@@ -106,7 +145,6 @@ $calendar-background: #eaea54;
   height: 100px;
   justify-content: center;
   color: white;
-  padding-right: 80px;
 }
 
 .header-logo {

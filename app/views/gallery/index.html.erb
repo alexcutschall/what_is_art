@@ -1,13 +1,19 @@
-<body style="margin-bottom: 200px;">
-  <h1>Gallery</h1>
-  Search
-  <%= link_to "Next Page", next_gallery_path(@next_page) %>
-  <% @search_artworks.each do |artwork| %>
-    <% present(artwork) do |artwork| %>
-      <div class="artwork">
-        <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link'  %>
-      </div>
-    <% end %>
-  <% end %>
-  <%= render 'partials/footer' %>
-</body>
+<html class="gallery-background">
+  <body style="margin-bottom: 200px;">
+    <%= render "partials/header" %>
+    <div class="gallery-header">
+      Gallery
+    </div>
+    <div class="gallery-artwork-container">
+      <% @search_artworks.each do |artwork| %>
+        <% present(artwork) do |artwork| %>
+          <div class="artwork gallery-artwork">
+            <%= link_to image_tag(artwork.image), artwork_path(artwork.id), class: 'image-link'  %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <%= button_to "Next Page", next_gallery_path(@next_page), method: :get, class: 'gallery-side-button' %>
+    <%= render 'partials/footer' %>
+  </body>
+</html>
