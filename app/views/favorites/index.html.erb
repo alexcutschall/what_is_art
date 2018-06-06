@@ -4,9 +4,10 @@
     <div class="gallery-header">
       Favorites
     </div>
-    <div class="artwork-box">
-    </div>
     <% @favorites.each do |favorite| %>
+    <div class="artwork-box">
+      <%= image_tag image_url(favorite.image) %>
+    </div>
       <div class="favorite artwork-information">
         <div class="artwork-information-headers">Title:</div><%= favorite.artwork_title %>
         <div class="artwork-information-headers">Category:</div><%= favorite.artwork_category %>
