@@ -17,6 +17,7 @@ gem 'paperclip'
 gem 'faraday'
 gem 'jquery-rails'
 gem 'faraday_middleware'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'rspec-rails'
