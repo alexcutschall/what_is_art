@@ -9,8 +9,8 @@
         <%= image_tag image_url(@artwork.image) %>
       </div>
       <div class="quiz-choice-container">
-        <div class="quiz-correct"><button class="answer"><%= @artist.name %></button></div>
-        <div class="quiz-incorrect"><button class="answer"><%= @random_artist.name %></button></div>
+        <button class="answer quiz-correct"><%= @artist.name %></button>
+        <button class="answer quiz-incorrect"><%= @random_artist.name %></button>
       </div>
       <span class="quiz-message"></span>
     </body>
