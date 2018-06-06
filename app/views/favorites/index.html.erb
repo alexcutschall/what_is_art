@@ -1,16 +1,22 @@
-<body style="margin-bottom: 200px;">
-<%= render "partials/header" %>
-Favorites
-<% @favorites.each do |favorite| %>
-  <div class="favorite">
-    <%= favorite.artwork_title %>
-    <%= favorite.artwork_category %>
-    <%= favorite.artwork_medium %>
-    <%= favorite.artwork_date %>
-    <%= favorite.artwork_series %>
-    <%= favorite.artwork_literature %>
-    <%= favorite.artwork_collecting_institution %>
-  <% end %>
-</div>
-<%= render "partials/footer" %>
-</body>
+<html class="artwork-background">
+  <body style="margin-bottom: 200px;">
+    <%= render "partials/header" %>
+    <div class="gallery-header">
+      Favorites
+    </div>
+    <div class="artwork-box">
+    </div>
+    <% @favorites.each do |favorite| %>
+      <div class="favorite artwork-information">
+        <div class="artwork-information-headers">Title:</div><%= favorite.artwork_title %>
+        <div class="artwork-information-headers">Category:</div><%= favorite.artwork_category %>
+        <div class="artwork-information-headers artwork-medium">Medium:</div><%= favorite.artwork_medium %>
+        <div class="artwork-information-headers">Date:</div><%= favorite.artwork_date %>
+        <div class="artwork-information-headers">Series:</div><%= favorite.artwork_series %>
+        <div class="artwork-information-headers">Literature:</div><%= favorite.artwork_literature %>
+        <div class="artwork-information-headers">Collecting Institution:</div><%= favorite.artwork_collecting_institution %>
+      </div>
+      <% end %>
+    <%= render "partials/footer" %>
+  </body>
+<html>
