@@ -57,10 +57,13 @@ $( document ).ready(() => {
     const playAnswer = $(this).text();
     const artworkArtist = $( "#artist-name").text();
     if (playAnswer == artworkArtist) {
-      $('.message').text('You got it, right!');
+      $('.quiz-message').text('You got it, right!');
+      $('.quiz-message').addClass('quiz-message-correct');
     }
     else {
-      $('.message').text("Sorry, that's not correct...");
+      $('.quiz-message').text("Sorry, that's not correct...");
+      $('.quiz-message').addClass('quiz-message-incorrect');
+
     };
   });
 
