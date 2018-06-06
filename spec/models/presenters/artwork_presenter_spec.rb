@@ -32,8 +32,8 @@ describe ArtworkPresenter do
       }
     }
   }
-  let(:artist){ Artwork.new(information) }
-  subject{ ArtworkPresenter.new(artist, @artist)}
+  let(:artwork){ Artwork.new(information) }
+  subject{ ArtworkPresenter.new(artwork, @artwork)}
   it "should provide a new note for a form" do
     expect(subject).to be_an ArtworkPresenter
     expect(subject.id).to eq("4d8b92eb4eb68a1b2c000968")
