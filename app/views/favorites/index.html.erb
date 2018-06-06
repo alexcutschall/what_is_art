@@ -5,18 +5,18 @@
       Favorites
     </div>
     <% @favorites.each do |favorite| %>
-    <div class="artwork-box">
-      <%= image_tag image_url(favorite.image) %>
-    </div>
-      <div class="favorite artwork-information">
-        <div class="artwork-information-headers">Title:</div><%= favorite.artwork_title %>
-        <div class="artwork-information-headers">Category:</div><%= favorite.artwork_category %>
-        <div class="artwork-information-headers artwork-medium">Medium:</div><%= favorite.artwork_medium %>
-        <div class="artwork-information-headers">Date:</div><%= favorite.artwork_date %>
-        <div class="artwork-information-headers">Series:</div><%= favorite.artwork_series %>
-        <div class="artwork-information-headers">Literature:</div><%= favorite.artwork_literature %>
-        <div class="artwork-information-headers">Collecting Institution:</div><%= favorite.artwork_collecting_institution %>
+      <div class="artwork-box">
+        <%= image_tag image_url(favorite.image) %>
       </div>
+        <div class="favorite artwork-information">
+          <div class="artwork-information-headers">Title:</div><%= favorite.artwork_title %>
+          <div class="artwork-information-headers">Category:</div><%= favorite.artwork_category %>
+          <div class="artwork-information-headers artwork-medium">Medium:</div><%= favorite.artwork_medium %>
+          <div class="artwork-information-headers">Date:</div><%= favorite.artwork_date %>
+          <div class="artwork-information-headers">Series:</div><%= favorite.artwork_series %>
+          <div class="artwork-information-headers">Literature:</div><%= favorite.artwork_literature %>
+          <div class="artwork-information-headers">Collecting Institution:</div><%= favorite.artwork_collecting_institution %>
+        </div>
       <% end %>
     <%= render "partials/footer" %>
   </body>
