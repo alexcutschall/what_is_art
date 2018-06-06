@@ -307,6 +307,37 @@ $calendar-background: #eaea54;
    }
 
 
+//QUIZ PAGE
+
+.quiz-correct {
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 200px;
+}
+
+.quiz-incorrect {
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  width: 200px;
+}
+
+.quiz-choice-container {
+  border: 5px solid black;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-evenly;
+  padding: 20px;
+  text-align: center;
+}
+
 //USER PROFILE PAGE
 .calendar {
   height: 100px;
