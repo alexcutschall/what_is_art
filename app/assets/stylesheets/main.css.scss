@@ -336,6 +336,21 @@ $calendar-background: #eaea54;
   text-align: center;
 }
 
+.quiz-message {
+  display: flex;
+  font-family: $fauno;
+  font-size: 30px;
+  justify-content: center;
+}
+
+.quiz-message-correct {
+  background-color: $simple-box-default;
+}
+
+.quiz-message-incorrect {
+  background-color: $favorite-box-background;
+}
+
 //USER PROFILE PAGE
 .calendar {
   height: 100px;
