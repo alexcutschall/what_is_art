@@ -12,7 +12,6 @@ describe 'as a user' do
 
       expect(page).to have_css('.artwork', count: 5)
       expect(page).to have_content('Gallery')
-      expect(page).to have_content('Search')
     end
   end
 end
