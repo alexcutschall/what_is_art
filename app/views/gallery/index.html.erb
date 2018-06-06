@@ -3,7 +3,6 @@
     <%= render "partials/header" %>
     <div class="gallery-header">
       Gallery
-      <%= link_to "Next Page", next_gallery_path(@next_page) %>
     </div>
     <div class="gallery-artwork-container">
       <% @search_artworks.each do |artwork| %>
@@ -14,6 +13,7 @@
         <% end %>
       <% end %>
     </div>
+    <%= button_to "Next Page", next_gallery_path(@next_page), method: :get, class: 'gallery-side-button' %>
     <%= render 'partials/footer' %>
   </body>
 </html>

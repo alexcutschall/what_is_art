@@ -80,22 +80,51 @@ $calendar-background: #eaea54;
 }
 
 .gallery-artwork-container {
+  background-image: image-url('grey-texture.jpg');
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 .gallery-background {
-  
+  background-image: image-url('wood.jpg');
+}
+
+.gallery-container-background {
+  background-image: image-url('grey-texture.jpg')
 }
 
 .gallery-header {
   align-items: center;
+  background-image: image-url('wood.jpg');
   display: flex;
   flex-direction: column;
   font-family: $playfair-display;
-  font-size: 50px;
+  font-size: 60px;
   justify-content: center;
+  padding-bottom: 30px;
+}
+
+.gallery-side-button {
+    border: 1px solid black;
+    border-radius: 100px;
+    font-family: $playfair-display;
+    font-size: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 245px;
+    padding-left: 75px;
+    opacity: 0.6;
+
+    position: fixed;
+    bottom: 270px;
+    right: -200px;
+      a {
+        color: black;
+        font-style: bold;
+      }
 }
 
 //GENE PAGE
