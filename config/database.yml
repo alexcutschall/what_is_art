@@ -81,5 +81,3 @@ test:
 production:
   <<: *default
   database: what_is_art_production
-  username: what_is_art
-  password: <%= ENV['WHAT_IS_ART_DATABASE_PASSWORD'] %>

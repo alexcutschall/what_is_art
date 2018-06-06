@@ -15,7 +15,7 @@ class Api::V1::Users::FavoritesController < ApplicationController
     artwork_literature = parsed_request["artworkLiterature"]
     artwork_collecting_institution = parsed_request["artworkCollectingInstitution"]
     image = parsed_request["artworkImageLink"]
-
+    
     artwork = user.favorites.create(artwork_id: artwork_id, artwork_title: artwork_title,
     artwork_category: artwork_category, artwork_medium: artwork_medium,
     artwork_date: artwork_date, artwork_series: artwork_series,

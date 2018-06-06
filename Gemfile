@@ -18,6 +18,7 @@ gem 'faraday'
 gem 'jquery-rails'
 gem 'faraday_middleware'
 gem 'newrelic_rpm'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'rspec-rails'
