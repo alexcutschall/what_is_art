@@ -1,3 +1,10 @@
+This repository is now maintained at
+[codeberg.org/alexcutschall/what_is_art](https://codeberg.org/alexcutschall/what_is_art).
+
+This GitHub mirror may be out of date. Please file issues and
+contributions on Codeberg.
+
+-----------------------------------------------------------------------------------------
 What Is Art?
 
 But, seriously though, what is it?
